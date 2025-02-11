@@ -93,12 +93,6 @@ melos run dev
 This will start the app in a browser, you can also run the app on a mobile device by following the instructions in the
 Flutter documentation.
 
-To enable the Application Insights logger during development you must find an instrumentation key in the Azure portal and pass it to the app with `--dart-define`:
-
-```bash
-melos run dev -- --dart-define APP_INSIGHTS_INSTRUMENTATION_KEY=[instrumentation key]
-```
-
 ## Linux
 
 ```shell

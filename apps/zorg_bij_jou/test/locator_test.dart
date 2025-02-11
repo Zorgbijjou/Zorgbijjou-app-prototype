@@ -31,6 +31,5 @@ void main() {
 
     // Verify that async loggers were registered
     await getIt.isReady<ZbjLogger>(instanceName: 'console');
-    await getIt.isReady<ZbjLogger>(instanceName: 'app-insights');
   });
 }

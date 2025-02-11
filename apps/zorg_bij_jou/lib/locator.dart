@@ -10,30 +10,12 @@ import 'package:http/http.dart' as http;
 import 'package:local_auth/local_auth.dart';
 import 'package:onboarding/data_source/onboarding_data_source.dart';
 import 'package:onboarding/data_source/onboarding_data_source_impl.dart';
-import 'package:uuid/uuid.dart';
 
 Future<void> setupLocator() async {
-  getIt.registerSingleton(
-      const String.fromEnvironment(APP_INSIGHTS_INSTRUMENTATION_KEY),
-      instanceName: APP_INSIGHTS_INSTRUMENTATION_KEY);
-  getIt.registerSingleton(const Uuid().v4(),
-      instanceName: APP_INSIGHTS_SESSION_ID);
-
   getIt.registerSingletonAsync<ZbjLogger>(() async {
     LocalStorage localStorage = await getIt.getAsync();
     return ConsoleLogger(userCode: localStorage.getCode() ?? '').initialize();
   }, instanceName: 'console');
-
-  getIt.registerSingletonAsync<ZbjLogger>(() async {
-    LocalStorage localStorage = await getIt.getAsync();
-    AppInsightsLogger insightsLogger = AppInsightsLogger(
-      instrumentationKey:
-          getIt<String>(instanceName: APP_INSIGHTS_INSTRUMENTATION_KEY),
-      sessionId: getIt<String>(instanceName: APP_INSIGHTS_SESSION_ID),
-      userCode: localStorage.getCode() ?? '',
-    );
-    return insightsLogger.initialize();
-  }, instanceName: 'app-insights');
 
   getIt.registerSingletonAsync<LocaleDataSource>(() async {
     var localeDataSource = LocaleDataSourceImpl(bundle: rootBundle);

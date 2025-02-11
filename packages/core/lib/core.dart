@@ -5,7 +5,6 @@ export './auth/local_auth_impl.dart';
 export './data_source/local_storage.dart';
 export './l10n/core_localizations.dart';
 export './locator/locator.dart';
-export './logging/app_insights_logger.dart';
 export './logging/console_logger.dart';
 export './logging/logging.dart';
 export './logging/zbj_logger.dart';
