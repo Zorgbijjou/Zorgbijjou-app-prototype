@@ -1,0 +1,564 @@
+{
+    "@@locale": "en",
+    "customerService": "Customer service",
+    "@customerService": {
+        "description": "Customer service"
+    },
+    "lastModified": "Last modified: {date}",
+    "@lastModified": {
+        "description": "Last modified",
+        "placeholders": {
+            "date": {
+                "type": "DateTime",
+                "format": "yMMMMd"
+            }
+        }
+    },
+    "question": "{count, plural, =0{no questions} =1{1 question} other{{count} questions}}",
+    "@question": {
+        "description": "[count|'no'] question(s)",
+        "placeholders": {
+            "count": {
+                "description": "number of questions",
+                "type": "num"
+            }
+        }
+    },
+    "questionsBySubject": "Questions by subject",
+    "@questionsBySubject": {
+        "description": "Questions by subject"
+    },
+    "frequentlyAskedQuestions": "Frequently asked questions",
+    "@frequentlyAskedQuestions": {
+        "description": "Frequently asked questions"
+    },
+    "contactFooterHeader": "Do you have a question?",
+    "@contactFooterHeader": {
+        "description": "Contact Footer header"
+    },
+    "contactFooterInformation": "We are ready to help you. We are open on working days from 08:00 to 17:00.",
+    "@contactFooterInformation": {
+        "description": "Contact Footer information"
+    },
+    "contactFooterCallUs": "Call us",
+    "@contactFooterCallUs": {
+        "description": "Contact Footer call us"
+    },
+    "contactFooterConversation": "Start a conversation",
+    "@contactFooterConversation": {
+        "description": "Contact Footer start a conversation"
+    },
+    "faqMoreQuestions": "More questions",
+    "@faqMoreQuestions": {
+        "description": "FAQ page more question"
+    },
+    "contentNotAvailable": "Unfortunately the text is not available at this time",
+    "@contentNotAvailable": {
+        "description": "Content not available"
+    },
+    "noLusciiEmail": "I have not received an e-mail from Luscii, now what?",
+    "@noLusciiEmail": {
+        "description": "I have no received an e-mail from Luscii, now what?"
+    },
+    "noLusciiEmailIntroduction": "You haven't received an e-mail? We're sorry. We will fix this step by step together with you",
+    "@noLusciiEmailIntroduction": {
+        "description": "You haven't received an e-mail? We're sorry. We will fix this step by step together with you"
+    },
+    "isHomeMeasurementFree": "Is home measurement by Zorg bij jou free?",
+    "@isHomeMeasurementFree": {
+        "description": "Is home measurement by Zorg bij jou free?"
+    },
+    "canIStopHomeMeasurement": "Can I stop home measurement?",
+    "@canIStopHomeMeasurement": {
+        "description": "Can I stop home measurement?"
+    },
+    "beginHomeMeasurement": "What do I need to do to start home monitoring?",
+    "@beginHomeMeasurement": {
+        "description": "What do I need to do to start home monitoring?"
+    },
+    "whenDoesTheNurseRespond": "When will the nurse respond to my message?",
+    "@whenDoesTheNurseRespond": {
+        "description": "When will the nurse respond to my message?"
+    },
+    "howIsMyPrivacy": "What about my privacy?",
+    "@howIsMyPrivacy": {
+        "description": "What about my privacy?"
+    },
+    "whyShouldIKeepMeasuring": "Why do I need to continue measuring, even if I feel fine?",
+    "@whyShouldIKeepMeasuring": {
+        "description": "Why do I need to continue measuring, even if I feel fine?"
+    },
+    "howDoesHomeMeasurementWork": "How does home measurement work",
+    "@howDoesHomeMeasurementWork": {
+        "description": "How does home measurement work"
+    },
+    "howDoesHomeMeasurementAppWork": "How does the home measurement app work?",
+    "@howDoesHomeMeasurementAppWork": {
+        "description": "How does home measurement app work"
+    },
+    "homeMeasurementApp": "Home measurement app",
+    "@homeMeasurementApp": {
+        "description": "Home measurement app"
+    },
+    "howDoIConductAMeasurement": "How do I perform a measurement in the Home Monitoring app?",
+    "@howDoIConductAMeasurement": {
+        "description": "How do I perform a measurement in the Home Monitoring app?"
+    },
+    "iDidNotReceiveAnInvitation": "I haven’t received an invitation for the Home Monitoring app. What should I do?",
+    "@iDidNotReceiveAnInvitation": {
+        "description": "I haven’t received an invitation for the Home Monitoring app. What should I do?"
+    },
+    "howDoIStopNotifications": "How can I ensure I don’t receive notifications during my vacation?",
+    "@howDoIStopNotifications": {
+        "description": "How can I ensure I don’t receive notifications during my vacation?"
+    },
+    "digitalAccessibilityHomeMeasurementsApp": "Digital accessibility of the Home Monitoring app",
+    "@digitalAccessibilityHomeMeasurementsApp": {
+        "description": "Digital accessibility of the Home Monitoring app"
+    },
+    "digitalAccessibilityZorgBijJouApp": "Digital accessibility of the Zorg bij jou app",
+    "@digitalAccessibilityZorgBijJouApp": {
+        "description": "Digital accessibility of the Zorg bij jou app"
+    },
+    "doINeedTheHomeMeasurementsApp": "Do I really need the Home Monitoring app?",
+    "@doINeedTheHomeMeasurementsApp": {
+        "description": "Do I really need the Home Monitoring app?"
+    },
+    "doINeedTheZorgBijJouApp": "Do I really need the Zorg bij jou app?",
+    "@doINeedTheZorgBijJouApp": {
+        "description": "Do I really need the Zorg bij jou app?"
+    },
+    "zorgBijJouApp": "Zorg bij jou app",
+    "@zorgBijJouApp": {
+        "description": "Zorg bij jou app"
+    },
+    "myHeartRateMonitor": "My heart rate monitor",
+    "@myHeartRateMonitor": {
+        "description": "My heart rate monitor"
+    },
+    "heartFailure": "Heart failure",
+    "@heartFailure": {
+        "description": "Heart failure"
+    },
+    "homeMeasurementWithHeartFailure": "Home measurement with heart failure",
+    "@homeMeasurementWithHeartFailure": {
+        "description": "Home measurement with heart failure"
+    },
+    "zorgBijJou": "Zorg bij jou",
+    "@zorgBijJou": {
+        "description": "Zorg bij jou"
+    },
+    "welcome": "Welkom back",
+    "@welcome": {
+        "description": "Welkom back"
+    },
+    "localAuthChallengeReason": "Unlock the Zorgbijjou app",
+    "@localAuthChallengeReason": {
+        "description": "Message to see when the user gets the local authentication challenge"
+    },
+    "localAuthCancelButton": "Back",
+    "@localAuthCancelButton": {
+        "description": "Cancel button when the user gets the local authentication challenge"
+    },
+    "localAuthChallengeAgain": "Unlock the Zorgbijjou app",
+    "@localAuthChallengeAgain": {
+        "description": "Local auth button to give the local auth challenge"
+    },
+    "localAuthToOnboarding": "Back to onboarding",
+    "@localAuthToOnboarding": {
+        "description": "Local auth button to go back to onboarding"
+    },
+    "onboardingConditionsHeader": "We need your permission",
+    "@onboardingConditionsHeader": {
+        "description": "Conditions Summary header for the Onboarding"
+    },
+    "onboardingConditionsExplanation": "To use Zorg bij jou you have to agree with the conditions:",
+    "@onboardingConditionsExplanation": {
+        "description": "Conditions Summary explanation for the Onboarding"
+    },
+    "onboardingConditionsItem1": "We collect medical data through questions or measurements that you take. For example, your weight or hart beat.",
+    "@onboardingConditionsItem1": {
+        "description": "Conditions Summary bullet item 1"
+    },
+    "onboardingConditionsItem2": "Your data is visible for doctors and medical practitioners.",
+    "@onboardingConditionsItem2": {
+        "description": "Conditions Summary bullet item 2"
+    },
+    "onboardingConditionsItem3": "Your data will be stored securely.",
+    "@onboardingConditionsItem3": {
+        "description": "Conditions Summary bullet item 3"
+    },
+    "onboardingConditionsReadAllButton": "Read all conditions",
+    "@onboardingConditionsReadAllButton": {
+        "description": "Conditions Summary read all conditions button"
+    },
+    "onboardingConditionsAgreeButton": "I agree",
+    "@onboardingConditionsAgreeButton": {
+        "description": "Conditions agree button"
+    },
+    "onboardingValidateInformationValidateButton": "Information is correct",
+    "@onboardingValidateInformationValidateButton": {
+        "description": "Validate information button"
+    },
+    "termsAndConditionsHeader": "Complete Conditions",
+    "@termsAndConditionsHeader": {
+        "description": "Terms and Conditions Header"
+    },
+    "onboardingLoginHeader": "Account check",
+    "@onboardingLoginHeader": {
+        "description": "Onboarding login information header"
+    },
+    "onboardingLoginParagraph": "To use the app, enter the code you received and your date of birth here. This way we ensure that your account is correct and safe.",
+    "@onboardingLoginParagraph": {
+        "description": "Onboarding login information paragraph"
+    },
+    "loginCodeHeader": "Enter your code",
+    "@loginCodeHeader": {
+        "description": "Enter the code"
+    },
+    "birthDateAccessibleLabel": "Birth date",
+    "@birthDateAccessibleLabel": {
+        "description": "Birth date accessible label"
+    },
+    "birthDateHeader": "Enter your birth date (dd-mm-yyyy)",
+    "@birthDateHeader": {
+        "description": "Enter your birth date"
+    },
+    "birthDateExample": "E.g. 09-12-1981",
+    "@birthDateExample": {
+        "description": "Birth date example"
+    },
+    "onboardingShowLoginInformationButton": "Where can I find the code?",
+    "@onboardingShowLoginInformationButton": {
+        "description": "Onboarding login information to show login information"
+    },
+    "loginInformationHeader": "Where can I find the code?",
+    "@loginInformationHeader": {
+        "description": "Onboarding login information to see where is the code"
+    },
+    "birthDateIncomplete": "Please enter your date of birth.",
+    "@birthDateIncomplete": {
+        "description": "Birth date incomplete"
+    },
+    "loginCodeIncomplete": "Please enter your code.",
+    "@loginCodeIncomplete": {
+        "description": "Login code is incomplete"
+    },
+    "loginCodeWrong": "Sorry, we don't recognize the code. Check if you filled in the code correctly.",
+    "@loginCodeWrong": {
+        "description": "Login code is wrong"
+    },
+    "loginAuthenticationErrorTitle": "This account is not recognized",
+    "@loginAuthenticationErrorTitle": {
+        "description": "Login authentication error title"
+    },
+    "loginAuthenticationErrorMessage": "Check if your code and birth date are valid and retry.\u2028Do you keep getting this error? Call the Medisch Service Centrum on +31 6 0192837.",
+    "@loginAuthenticationErrorMessage": {
+        "description": "Login authentication error message"
+    },
+    "unexpectedErrorTitle": "Unexpected error occurred.",
+    "@unexpectedErrorTitle": {
+        "description": "Unexpected error title to the patient"
+    },
+    "unexpectedErrorMessage": "There is an unexpected error. Check the internet connection and retry.",
+    "@unexpectedErrorMessage": {
+        "description": "Unexpected error message to the patient"
+    },
+    "onboardingGettingStartedHeader": "Download the Home Monitoring app to get started",
+    "@onboardingGettingStartedHeader": {
+        "description": "Onboarding Getting Started header to tell about the Home Monitoring app"
+    },
+    "onboardingGettingStartedParagraph1": "You can ask questions, view your treatment plan, and receive tips on how to work on your health.",
+    "@onboardingGettingStartedParagraph1": {
+        "description": "Onboarding Getting Started paragraph 1"
+    },
+    "onboardingGettingStartedParagraph2": "You can also measure your blood pressure, weight, and other values yourself. You will receive immediate feedback on your measurements.",
+    "@onboardingGettingStartedParagraph2": {
+        "description": "Onboarding Getting Started paragraph 2"
+    },
+    "onboardingGettingStartedParagraph3": "You can also ask the nurse questions or answer questions from the doctor.",
+    "@onboardingGettingStartedParagraph3": {
+        "description": "Onboarding Getting Started paragraph 3"
+    },
+    "onboardingGettingStartedButton": "Understood",
+    "@onboardingGettingStartedButton": {
+        "description": "Getting started button"
+    },
+    "onboardingMultipleAppsIntroductionHeader": "Welcome, together we will monitor your health",
+    "@onboardingMultipleAppsIntroductionHeader": {
+        "description": "Onboarding Multiple Apps Introduction header to tell about usage of multiple apps"
+    },
+    "onboardingMultipleAppsIntroductionParagraph": "You are using the Zorg bij jou app. This app is part of the Luscii platform. With this platform, you can monitor your health and communicate with your healthcare provider.",
+    "@onboardingMultipleAppsIntroductionParagraph": {
+        "description": "Onboarding Multiple Apps Introduction paragraph to tell about usage of multiple apps"
+    },
+    "onboardingMultipleAppsIntroductionImage": "Onboarding Multiple Apps Introduction image to show the two app icons",
+    "@onboardingMultipleAppsIntroductionImage": {
+        "description": "Onboarding Multiple Apps Introduction image to show the two app icons"
+    },
+    "onboardingMultipleAppsZorgBijJouHeader": "Zorg bij jou",
+    "@onboardingMultipleAppsZorgBijJouHeader": {
+        "description": "Onboarding Multiple Apps Zorg bij jou header"
+    },
+    "onboardingMultipleAppsZorgBijJouParagraph": "The Zorg bij jou app (this app) is used for:",
+    "@onboardingMultipleAppsZorgBijJouParagraph": {
+        "description": "Onboarding Multiple Apps Zorg bij jou paragraph"
+    },
+    "onboardingMultipleAppsZorgBijJouItem1Title": "Ask questions or answer questions",
+    "@onboardingMultipleAppsZorgBijJouItem1Title": {
+        "description": "Onboarding Multiple Apps Zorg bij jou item 1 title"
+    },
+    "onboardingMultipleAppsZorgBijJouItem1Description": "You can ask the nurse questions or answer questions from the doctor.",
+    "@onboardingMultipleAppsZorgBijJouItem1Description": {
+        "description": "Onboarding Multiple Apps Zorg bij jou item 1 description"
+    },
+    "onboardingMultipleAppsZorgBijJouItem2Title": "Receive explanations and tips",
+    "@onboardingMultipleAppsZorgBijJouItem2Title": {
+        "description": "Onboarding Multiple Apps Zorg bij jou item 2 title"
+    },
+    "onboardingMultipleAppsZorgBijJouItem2Description": "You will receive explanations about your treatment and tips on how to work on your health.",
+    "@onboardingMultipleAppsZorgBijJouItem2Description": {
+        "description": "Onboarding Multiple Apps Zorg bij jou item 2 description"
+    },
+    "onboardingMultipleAppsHomeMeasurementHeader": "Home measurement",
+    "@onboardingMultipleAppsHomeMeasurementHeader": {
+        "description": "Onboarding Multiple Apps Home Measurement header"
+    },
+    "onboardingMultipleAppsHomeMeasurementParagraph": "The Home Monitoring app is used for:",
+    "@onboardingMultipleAppsHomeMeasurementParagraph": {
+        "description": "Onboarding Multiple Apps Home Measurement paragraph"
+    },
+    "onboardingMultipleAppsHomeMeasurementItem1Title": "Measure yourself",
+    "@onboardingMultipleAppsHomeMeasurementItem1Title": {
+        "description": "Onboarding Multiple Apps Home Measurement item 1 title"
+    },
+    "onboardingMultipleAppsHomeMeasurementItem1Description": "You can measure your blood pressure, weight, and other values yourself.",
+    "@onboardingMultipleAppsHomeMeasurementItem1Description": {
+        "description": "Onboarding Multiple Apps Home Measurement item 1 description"
+    },
+    "onboardingMultipleAppsHomeMeasurementItem2Title": "Immediate feedback",
+    "@onboardingMultipleAppsHomeMeasurementItem2Title": {
+        "description": "Onboarding Multiple Apps Home Measurement item 2 title"
+    },
+    "onboardingMultipleAppsHomeMeasurementItem2Description": "You will receive immediate feedback on your measurements.",
+    "@onboardingMultipleAppsHomeMeasurementItem2Description": {
+        "description": "Onboarding Multiple Apps Home Measurement item 2 description"
+    },
+    "backButton": "Back",
+    "@backButton": {
+        "description": "Go Back button"
+    },
+    "nextButtonAccessibilityLabel": "Continue",
+    "@nextButtonAccessibilityLabel": {
+        "description": "Next button accessibility label"
+    },
+    "statusBarAccessibilityLabel": "Step {currentPage} from {totalPages}, active",
+    "@statusBarAccessibilityLabel": {
+        "description": "Status bar accessibility label to show the current page and the total pages",
+        "placeholders": {
+            "currentPage": {
+                "description": "The current page",
+                "type": "int"
+            },
+            "totalPages": {
+                "description": "Total number of pages",
+                "type": "int"
+            }
+        }
+    },
+    "bottomNavigationService": "Service",
+    "@bottomNavigationService": {
+        "description": "Service"
+    },
+    "conversationTitle": "Conversation",
+    "@conversationTitle": {
+        "description": "Conversation"
+    },
+    "noConversations": "No conversations",
+    "@noConversations": {
+        "description": "no conversations in overview"
+    },
+    "conversationNewMessage": "New",
+    "@conversationNewMessage": {
+        "description": "New message"
+    },
+    "conversationYesterday": "Yesterday",
+    "@conversationYesterday": {
+        "description": "Yesterday"
+    },
+    "conversationTime": "{datetime}",
+    "@conversationTime": {
+        "description": "Localized conversation time",
+        "placeholders": {
+            "datetime": {
+                "type": "DateTime",
+                "format": "H:mm",
+                "isCustomDateFormat": "true"
+            }
+        }
+    },
+    "conversationDateTime": "{datetime}",
+    "@conversationDateTime": {
+        "description": "Localized conversation datetime",
+        "placeholders": {
+            "datetime": {
+                "type": "DateTime",
+                "format": "y MMM d, H:mm",
+                "isCustomDateFormat": "true"
+            }
+        }
+    },
+    "conversationDate": "{date}",
+    "@conversationDate": {
+        "description": "Localized conversation date",
+        "placeholders": {
+            "date": {
+                "type": "DateTime",
+                "format": "y MMM d",
+                "isCustomDateFormat": "true"
+            }
+        }
+    },
+    "conversationAvatarSemanticLabel": "Avatar {name}",
+    "@conversationAvatarSemanticLabel": {
+        "description": "Avatar semantics label",
+        "placeholders": {
+            "name": {
+                "description": "name of the user of the avatar",
+                "type": "String"
+            }
+        }
+    },
+    "conversationFromSystemSemanticLabel": "from the App",
+    "@conversationFromSystemSemanticLabel": {
+        "description": "Conversation message from system user"
+    },
+    "conversationMessageSemanticLabel": "Message from {user}. {message}. Sent in {conversation} at {date} {time}.",
+    "@conversationMessageSemanticLabel": {
+        "description": "Localized conversation semantic message",
+        "placeholders": {
+            "user": {
+                "description": "User that sent the message",
+                "type": "String"
+            },
+            "message": {
+                "description": "Contents of the last message in the conversation",
+                "type": "String"
+            },
+            "conversation": {
+                "description": "Conversation title",
+                "type": "String"
+            },
+            "date": {
+                "description": "Date the last message in the conversation was sent",
+                "type": "DateTime",
+                "format": "yMMMMd"
+            },
+            "time": {
+                "description": "Time the last message in the conversation was sent",
+                "type": "DateTime",
+                "format": "Hm"
+            }
+        }
+    },
+    "conversationSemanticLabel": "Message: {title}. {message}. {date} {time}.{unreadMessages, plural, =0{} =1{ 1 unread message.} other{{unreadMessages} unread messages.}}",
+    "@conversationSemanticLabel": {
+        "description": "Localized conversation semantic message",
+        "placeholders": {
+            "title": {
+                "description": "Conversation title",
+                "type": "String"
+            },
+            "message": {
+                "description": "Contents of the last message in the conversation",
+                "type": "String"
+            },
+            "date": {
+                "description": "Date the last message in the conversation was sent",
+                "type": "DateTime",
+                "format": "yMMMMd"
+            },
+            "time": {
+                "description": "Time the last message in the conversation was sent",
+                "type": "DateTime",
+                "format": "Hm"
+            },
+            "unreadMessages": {
+                "description": "Number of unread messages in the conversation",
+                "type": "int"
+            }
+        }
+    },
+    "conversationNoMessageSemanticLabel": "Message: {title}.{unreadMessages, plural, =0{} =1{ 1 unread message.} other{ {unreadMessages} unread messages.}}",
+    "@conversationNoMessageSemanticLabel": {
+        "description": "Localized conversation semantic message",
+        "placeholders": {
+            "title": {
+                "description": "Conversation title",
+                "type": "String"
+            },
+            "unreadMessages": {
+                "description": "Number of unread messages in the conversation",
+                "type": "int"
+            }
+        }
+    },
+    "conversationSendMessageSemanticLabel": "Message",
+    "@conversationSendMessageSemanticLabel": {
+        "description": "Send conversation message accessibility label"
+    },
+    "validateInformationSuccessTitle": "Success!",
+    "@validateInformationSuccessTitle": {
+        "description": "Title for the success notification banner in validate information"
+    },
+    "validateInformationSuccessContent": "Your account has been successfully verified.",
+    "@validateInformationSuccessContent": {
+        "description": "Content for the success notification banner in validate information"
+    },
+    "validateInformationRecognizedData": "We recognize the following data:",
+    "@validateInformationRecognizedData": {
+        "description": "Text indicating recognized data in validate information"
+    },
+    "validateInformationHospitalDepartment": "Your hospital is {hospitalName} and you are being treated at {departmentName}",
+    "@validateInformationHospitalDepartment": {
+        "description": "Text indicating hospital and department in validate information",
+        "placeholders": {
+            "hospitalName": {
+                "type": "String",
+                "description": "Name of the hospital"
+            },
+            "departmentName": {
+                "type": "String",
+                "description": "Name of the department"
+            }
+        }
+    },
+    "validateInformationTreatment": "You are receiving care for {treatmentName}",
+    "@validateInformationTreatment": {
+        "description": "Text indicating treatment in validate information",
+        "placeholders": {
+            "treatmentName": {
+                "type": "String",
+                "description": "Name of the treatment"
+            }
+        }
+    },
+    "validateInformationPatientName": "Your name is {patientName}",
+    "@validateInformationPatientName": {
+        "description": "Text indicating patient name in validate information",
+        "placeholders": {
+            "patientName": {
+                "type": "String",
+                "description": "Name of the patient"
+            }
+        }
+    },
+    "validateInformationIncorrectButton": "Is this incorrect?",
+    "@validateInformationIncorrectButton": {
+        "description": "Button text for indicating incorrect information in validate information"
+    },
+    "validateInformationNextButton": "Next",
+    "@validateInformationNextButton": {
+        "description": "Next button text for indicating correct information in validate information"
+    }
+}

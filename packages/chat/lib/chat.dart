@@ -1,0 +1,13 @@
+export 'data_source/chat_data_source.dart';
+export 'data_source/chat_data_source_impl.dart';
+export 'mocks/mock_chat_api.dart';
+export 'models/conversation.dart';
+export 'view_models/conversation_view_model.dart';
+export 'view_models/conversations_view_model.dart';
+export 'widgets/avatar_component.dart';
+export 'widgets/conversation_component.dart';
+export 'widgets/conversation_item_component.dart';
+export 'widgets/conversation_page_component.dart';
+export 'widgets/conversations_component.dart';
+export 'widgets/conversations_tablet_component.dart';
+export 'widgets/message_component.dart';

@@ -1,0 +1,1 @@
+We doen ons best om de Zorg bij jou-app toegankelijk te maken voor iedereen, ook voor mensen met een beperking. Heb je een toegankelijkheidsprobleem ontdekt? Laat het ons weten via [app@zorgbijjou.nl](mailto:app@zorgbijjou.nl).
