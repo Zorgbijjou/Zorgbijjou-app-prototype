@@ -1,7 +1,7 @@
-# Zorgbijjou App Prototype
+# Zorgbijjou Patients App Prototype
 Het doel van de Zorg bij jou app is om de onboarding en inclusie van patiënten die hybride zorg ontvangen te verbeteren. De app biedt patiënten een digitaal platform om informatie te verkrijgen, te communiceren met zorgverleners en hun gezondheid te beheren. Het prototype toont de visie van Zorg bij jou op hoe de ervaring van de patiënt kan worden verbeterd. 
 
-# Patients team workspace
+# Patients App team workspace
 
 Hosts the code for the Zorg bij jou app. The Zorg bij jou app is a Flutter project managed with Melos monorepo tooling.
 Widgetbook is implemented for developing Flutter widgets in isolation.
