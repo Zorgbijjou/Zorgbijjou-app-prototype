@@ -1,0 +1,95 @@
+name: patients_workspace
+
+packages:
+  - apps/**
+  - packages/**
+
+command:
+  bootstrap:
+    dev_dependencies:
+      build_runner: ^2.4.11
+      flutter_lints: 5.0.0
+      freezed: ^2.5.7
+      json_serializable: ^6.9.0
+    dependencies:
+      collection: ^1.18.0
+      equatable: ^2.0.7
+      freezed_annotation: ^2.4.4
+      http: ^1.2.2
+      json_annotation: ^4.9.0
+      mocktail: ^1.0.4
+      shared_preferences: ^2.3.3
+      url_launcher: ^6.3.1
+      flutter_secure_storage: ^9.2.2
+      clock: ^1.1.1
+      local_auth: ^2.3.0
+
+scripts:
+  dev:
+    exec: flutter run -d chrome
+    packageFilters:
+      scope: zorg_bij_jou
+  build:web:
+    exec: flutter build web --release --base-href "/app/"
+    packageFilters:
+      scope: zorg_bij_jou
+  build:android:
+    exec: flutter build apk --release
+    packageFilters:
+      scope: zorg_bij_jou
+  build:ios:
+    exec: flutter build ipa --release
+    packageFilters:
+      scope: zorg_bij_jou
+  build:widgetbook:
+    exec: flutter build web --release --base-href "/widgetbook/"
+    packageFilters:
+      scope: widgetbook_workspace
+  test: melos exec --dir-exists test --diff main...HEAD -- flutter test --no-pub --coverage
+  test:all: melos exec -c 1 --dir-exists test -- flutter test --no-pub --coverage --reporter github
+  integration_test: melos exec --dir-exists integration_test -- flutter test integration_test --no-pub --coverage
+  integration_test:all: melos exec --dir-exists integration_test -- flutter test integration_test --no-pub --coverage --reporter github
+  lint:
+    description: lint packages
+    steps:
+      - format --output none --set-exit-if-changed
+      - analyze --fatal-infos
+  widgetbook:
+    exec: flutter run -d chrome
+    packageFilters:
+      scope: widgetbook_workspace
+  widgetbook:update:
+    exec: dart run build_runner build -d
+    packageFilters:
+      scope: widgetbook_workspace
+  widgetbook:win:
+    exec: flutter run -d windows
+    packageFilters:
+      scope: widgetbook_workspace
+  widgetbook:mac:
+    exec: flutter run -d macos
+    packageFilters:
+      scope: widgetbook_workspace
+  tokens:update:
+    exec: figma2flutter
+    packageFilters:
+      scope: theme
+  l10n:generate:
+    steps:
+      - melos exec flutter gen-l10n
+      - melos exec dart fix --apply
+      - format
+  build-runner:watch:all:
+    exec: flutter pub run build_runner watch --delete-conflicting-outputs
+  build-runner:build:all:
+    run: flutter pub run build_runner build --delete-conflicting-outputs
+    exec:
+      concurrency: 1
+  icons:generate:
+    exec: flutter pub run flutter_launcher_icons
+    packageFilters:
+      scope: zorg_bij_jou
+  splash:generate:
+    exec: dart run flutter_native_splash:create
+    packageFilters:
+      scope: zorg_bij_jou
