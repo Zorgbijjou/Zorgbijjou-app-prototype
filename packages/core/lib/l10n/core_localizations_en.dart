@@ -1,5 +1,5 @@
+// ignore: unused_import
 import 'package:intl/intl.dart' as intl;
-
 import 'core_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -13,8 +13,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String lastModified(DateTime date) {
-    final intl.DateFormat dateDateFormat =
-        intl.DateFormat('d MMM y', localeName);
+    final intl.DateFormat dateDateFormat = intl.DateFormat.yMMMMd(localeName);
     final String dateString = dateDateFormat.format(date);
 
     return 'Last modified: $dateString';
@@ -353,7 +352,7 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String conversationDateTime(DateTime datetime) {
     final intl.DateFormat datetimeDateFormat =
-        intl.DateFormat('d MMM y, H:mm', localeName);
+        intl.DateFormat('y MMM d, H:mm', localeName);
     final String datetimeString = datetimeDateFormat.format(datetime);
 
     return '$datetimeString';
@@ -362,7 +361,7 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String conversationDate(DateTime date) {
     final intl.DateFormat dateDateFormat =
-        intl.DateFormat('d MMM y', localeName);
+        intl.DateFormat('y MMM d', localeName);
     final String dateString = dateDateFormat.format(date);
 
     return '$dateString';
@@ -379,8 +378,7 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String conversationMessageSemanticLabel(String user, String message,
       String conversation, DateTime date, DateTime time) {
-    final intl.DateFormat dateDateFormat =
-        intl.DateFormat('dMMMMy', localeName);
+    final intl.DateFormat dateDateFormat = intl.DateFormat.yMMMMd(localeName);
     final String dateString = dateDateFormat.format(date);
     final intl.DateFormat timeDateFormat = intl.DateFormat.Hm(localeName);
     final String timeString = timeDateFormat.format(time);
@@ -391,8 +389,7 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String conversationSemanticLabel(String title, String message, DateTime date,
       DateTime time, int unreadMessages) {
-    final intl.DateFormat dateDateFormat =
-        intl.DateFormat('dMMMMy', localeName);
+    final intl.DateFormat dateDateFormat = intl.DateFormat.yMMMMd(localeName);
     final String dateString = dateDateFormat.format(date);
     final intl.DateFormat timeDateFormat = intl.DateFormat.Hm(localeName);
     final String timeString = timeDateFormat.format(time);
