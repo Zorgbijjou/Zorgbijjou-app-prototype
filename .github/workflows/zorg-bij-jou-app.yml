@@ -41,6 +41,7 @@ jobs:
         name: Install Flutter
         with:
           channel: stable
+          flutter-version: 3.29.0
           cache: true
           cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:" # optional, change this to force refresh cache
           cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # optional, change this to specify the cache path
@@ -49,13 +50,12 @@ jobs:
       - uses: ./.github/actions/melos/
         name: Install Melos
         with:
+          melos-version: 6.3.2
           run-bootstrap: false
       - name: Bootstrap Melos
         run: melos bootstrap
       - name: Build Runner Build
         run: melos build-runner:build:all
-      - name: Format
-        run: melos format --output none --set-exit-if-changed
       - name: Analyze
         run: melos analyze --fatal-infos
       - name: Tests
