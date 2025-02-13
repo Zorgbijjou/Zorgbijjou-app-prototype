@@ -52,6 +52,8 @@ jobs:
         with:
           melos-version: 6.3.2
           run-bootstrap: false
+      - name: Format
+        run: melos format --output none --set-exit-if-changed
       - name: Bootstrap Melos
         run: melos bootstrap
       - name: Build Runner Build
