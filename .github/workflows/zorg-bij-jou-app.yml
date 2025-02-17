@@ -42,86 +42,86 @@ run-name: Build Zorg bij jou App
 jobs:
   # Detects changes to short-circuit on non app related pr. To make the gate mandatory, we can't just not run the
   # required step
-  build:
-    name: app | build, test, scan
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
-    steps:
-      - uses: actions/checkout@v4
-        name: Checkout
-        with:
-          fetch-depth: 0
-      - name: Show inputs
-        env:
-          INPUTS_JSON: ${{ toJson(inputs) }}
-        run: |
-          echo "### Input parameters" >> $GITHUB_STEP_SUMMARY
-          echo -e "\`\`\`json\n$INPUTS_JSON\n\`\`\`" >> $GITHUB_STEP_SUMMARY
-      - uses: actions/setup-java@v4
-        name: Install Java
-        with:
-          distribution: "microsoft"
-          java-version: "21"
-      - uses: ./.github/actions/flutter/
-        name: Install Flutter
-        with:
-          channel: stable
-          flutter-version: 3.29.0
-          cache: true
-          cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:" # optional, change this to force refresh cache
-          cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # optional, change this to specify the cache path
-          pub-cache-key: "flutter-pub:os:-:channel:-:version:-:arch:-:hash:" # optional, change this to force refresh cache of dart pub get dependencies
-          pub-cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # optional, change this to specify the cache path
-      - uses: ./.github/actions/melos/
-        name: Install Melos
-        with:
-          melos-version: 6.3.2
-          run-bootstrap: false
-      - name: Format
-        run: melos format --output none --set-exit-if-changed
-      - name: Bootstrap Melos
-        run: melos bootstrap
-      - name: Build Runner Build
-        run: melos build-runner:build:all
-      - name: Analyze
-        run: melos analyze --fatal-infos
-      - name: Tests
-        run: melos test:all
-      - name: SonarCloud Scan
-        # SonarSource/sonarcloud-github-action does not function properly with Dart projects at the moment: https://community.sonarsource.com/t/dart-support-melos-dependency-management/125041
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        working-directory: .
-        run: |
-          export SONAR_SCANNER_VERSION=6.1.0.4477
-          export SONAR_SCANNER_HOME=$HOME/.sonar/sonar-scanner-$SONAR_SCANNER_VERSION-linux-x64
-          curl --create-dirs -sSLo $HOME/.sonar/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONAR_SCANNER_VERSION-linux-x64.zip
-          unzip -o $HOME/.sonar/sonar-scanner.zip -d $HOME/.sonar/
-          export PATH=$SONAR_SCANNER_HOME/bin:$PATH
-          export SONAR_SCANNER_OPTS="-server"
-          sonar-scanner \
-            -Dsonar.host.url=https://sonarcloud.io
-      - name: Build Web
-        run: melos build:web
-      - name: Build Widgetbook
-        run: melos build:widgetbook
-      - uses: actions/upload-artifact@v4
-        name: Upload Widgetbook artifact
-        with:
-          name: widgetbook
-          path: apps/widgetbook/build/web/
-      - uses: actions/upload-artifact@v4
-        name: Upload Zorg Bij Jou web app artifact
-        with:
-          name: web-app
-          path: apps/zorg_bij_jou/build/web/
+  # build:
+  #   name: app | build, test, scan
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     id-token: write
+  #     contents: read
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #       name: Checkout
+  #       with:
+  #         fetch-depth: 0
+  #     - name: Show inputs
+  #       env:
+  #         INPUTS_JSON: ${{ toJson(inputs) }}
+  #       run: |
+  #         echo "### Input parameters" >> $GITHUB_STEP_SUMMARY
+  #         echo -e "\`\`\`json\n$INPUTS_JSON\n\`\`\`" >> $GITHUB_STEP_SUMMARY
+  #     - uses: actions/setup-java@v4
+  #       name: Install Java
+  #       with:
+  #         distribution: "microsoft"
+  #         java-version: "21"
+  #     - uses: ./.github/actions/flutter/
+  #       name: Install Flutter
+  #       with:
+  #         channel: stable
+  #         flutter-version: 3.29.0
+  #         cache: true
+  #         cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:" # optional, change this to force refresh cache
+  #         cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # optional, change this to specify the cache path
+  #         pub-cache-key: "flutter-pub:os:-:channel:-:version:-:arch:-:hash:" # optional, change this to force refresh cache of dart pub get dependencies
+  #         pub-cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # optional, change this to specify the cache path
+  #     - uses: ./.github/actions/melos/
+  #       name: Install Melos
+  #       with:
+  #         melos-version: 6.3.2
+  #         run-bootstrap: false
+  #     - name: Format
+  #       run: melos format --output none --set-exit-if-changed
+  #     - name: Bootstrap Melos
+  #       run: melos bootstrap
+  #     - name: Build Runner Build
+  #       run: melos build-runner:build:all
+  #     - name: Analyze
+  #       run: melos analyze --fatal-infos
+  #     - name: Tests
+  #       run: melos test:all
+  #     - name: SonarCloud Scan
+  #       # SonarSource/sonarcloud-github-action does not function properly with Dart projects at the moment: https://community.sonarsource.com/t/dart-support-melos-dependency-management/125041
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  #       working-directory: .
+  #       run: |
+  #         export SONAR_SCANNER_VERSION=6.1.0.4477
+  #         export SONAR_SCANNER_HOME=$HOME/.sonar/sonar-scanner-$SONAR_SCANNER_VERSION-linux-x64
+  #         curl --create-dirs -sSLo $HOME/.sonar/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONAR_SCANNER_VERSION-linux-x64.zip
+  #         unzip -o $HOME/.sonar/sonar-scanner.zip -d $HOME/.sonar/
+  #         export PATH=$SONAR_SCANNER_HOME/bin:$PATH
+  #         export SONAR_SCANNER_OPTS="-server"
+  #         sonar-scanner \
+  #           -Dsonar.host.url=https://sonarcloud.io
+  #     - name: Build Web
+  #       run: melos build:web
+  #     - name: Build Widgetbook
+  #       run: melos build:widgetbook
+  #     - uses: actions/upload-artifact@v4
+  #       name: Upload Widgetbook artifact
+  #       with:
+  #         name: widgetbook
+  #         path: apps/widgetbook/build/web/
+  #     - uses: actions/upload-artifact@v4
+  #       name: Upload Zorg Bij Jou web app artifact
+  #       with:
+  #         name: web-app
+  #         path: apps/zorg_bij_jou/build/web/
 
   deploy_ios_app:
     if: github.event.inputs.isDeployIosApp == 'true'
-    needs: build
+    # needs: build
     runs-on: macos-latest
     environment: Flutter
     steps:
@@ -199,8 +199,8 @@ jobs:
 
   deploy_android_app:
     if: github.event.inputs.isDeployAndroidApp == 'true'
-    needs: build
-    runs-on: zbj-ubuntu-latest
+    # needs: build
+    runs-on: ubuntu-latest
     environment: Flutter
     env:
       AAB_PATH: patients/app/apps/zorg_bij_jou/build/app/outputs/bundle/release/app-release.aab
