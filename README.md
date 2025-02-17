@@ -1,3 +1,6 @@
+[![ZBJ App](https://github.com/Zorgbijjou/Zorgbijjou-app-prototype/actions/workflows/zorg-bij-jou-app.yml/badge.svg?branch=main)](https://github.com/Zorgbijjou/Zorgbijjou-app-prototype/actions/workflows/zorg-bij-jou-app.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=zorgbijjou_app&metric=alert_status&token=5f30a2548798ed1620b2426e242973d107cb04bb)](https://sonarcloud.io/summary/new_code?id=zorgbijjou_app)
+
 # Zorgbijjou App Prototype
 Het doel van de Zorg bij jou app is om de onboarding en inclusie van patiënten die hybride zorg ontvangen te verbeteren. De app biedt patiënten een digitaal platform om informatie te verkrijgen, te communiceren met zorgverleners en hun gezondheid te beheren. Het prototype toont de visie van Zorg bij jou op hoe de ervaring van de patiënt kan worden verbeterd. 
 
