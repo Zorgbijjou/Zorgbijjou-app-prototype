@@ -1,7 +1,7 @@
 name: zorg_bij_jou
 description: "Zorg bij jou app - Supports the patient journey through Hybrid Care."
 publish_to: "none"
-version: 0.1.36+42
+version: 0.1.37+43
 
 environment:
   sdk: ">=3.4.3 <4.0.0"
