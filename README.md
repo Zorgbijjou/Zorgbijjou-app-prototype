@@ -2,8 +2,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=zorgbijjou_app&metric=alert_status&token=5f30a2548798ed1620b2426e242973d107cb04bb)](https://sonarcloud.io/summary/new_code?id=zorgbijjou_app)
 
 # Zorg bij jou App Prototype
-Het doel van de Zorg bij jou app is om de onboarding en inclusie van patiënten die hybride zorg ontvangen te verbeteren. De app biedt patiënten een digitaal platform om informatie te verkrijgen, te communiceren met zorgverleners en hun gezondheid te beheren. Het prototype toont de visie van Zorg bij jou op hoe de ervaring van de patiënt kan worden verbeterd. 
-
+The goal of the Zorg bij jou app is to improve the onboarding and inclusion of patients receiving hybrid care. The app provides patients with a digital platform to obtain information and communicate with healthcare providers. The prototype shows Zorg bij jou's vision of how the patient experience can be improved.
 
 ## Zorg bij jou App impression
 <img src="screenshots/multiple_apps_introduction.png" alt="multiple_apps_introduction" width="200">
@@ -13,16 +12,12 @@ Het doel van de Zorg bij jou app is om de onboarding en inclusie van patiënten 
 <img src="screenshots/conversations.png" alt="conversations" width="200">
 <img src="screenshots/conversation.png" alt="conversation" width="200">
 
-
-# Patients team workspace
-
-Hosts the code for the Zorg bij jou app. The Zorg bij jou app is a Flutter project managed with Melos monorepo tooling.
+## Getting started
+The Zorg bij jou app is a Flutter project managed with Melos.
 Widgetbook is implemented for developing Flutter widgets in isolation.
 
 If you find any of this information to be outdated or unclear, feel free to fix it if you are able, alternatively you
-can reach to the Patient team on our [patient-team Slack channel](https://zorg-bij-jou.slack.com/archives/C06SXC6SU2Z)
-
-## Getting started
+can reach to Zorg bij jou. 
 
 Before you can get started with development on the Zorg bij jou app you will need to install Chrome, the Flutter SDK and
 Melos, follow the steps below to get ready.
