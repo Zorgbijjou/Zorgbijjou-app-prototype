@@ -1,0 +1,1 @@
+Ja, dat kan. Stuur ons een bericht, dan bespreken we dit met je arts en zorgen we voor een goede afronding.

@@ -1,0 +1,271 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Deployment Environment"
+        type: choice
+        required: true
+        default: "development"
+        options:
+          - "development"
+          - "test"
+          - "acceptance"
+          - "production"
+      isDeployDevelopmentArtifactsApp:
+        description: "Deploy Development Artifacts"
+        type: boolean
+        required: true
+        default: false
+      isDeployIosApp:
+        description: "Deploy iOS App"
+        type: boolean
+        required: true
+        default: false
+      isDeployAndroidApp:
+        description: "Deploy Android App"
+        type: boolean
+        required: true
+        default: false
+
+defaults:
+  run:
+    working-directory: ./
+
+name: ZBJ App
+run-name: Build Zorg bij jou App
+jobs:
+  # Detects changes to short-circuit on non app related pr. To make the gate mandatory, we can't just not run the
+  # required step
+  build:
+    name: app | build, test, scan
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        name: Checkout
+        with:
+          fetch-depth: 0
+      - name: Show inputs
+        env:
+          INPUTS_JSON: ${{ toJson(inputs) }}
+        run: |
+          echo "### Input parameters" >> $GITHUB_STEP_SUMMARY
+          echo -e "\`\`\`json\n$INPUTS_JSON\n\`\`\`" >> $GITHUB_STEP_SUMMARY
+      - uses: actions/setup-java@v4
+        name: Install Java
+        with:
+          distribution: "microsoft"
+          java-version: "21"
+      - uses: ./.github/actions/flutter/
+        name: Install Flutter
+        with:
+          channel: stable
+          flutter-version: 3.29.0
+          cache: true
+          cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:" # optional, change this to force refresh cache
+          cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # optional, change this to specify the cache path
+          pub-cache-key: "flutter-pub:os:-:channel:-:version:-:arch:-:hash:" # optional, change this to force refresh cache of dart pub get dependencies
+          pub-cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # optional, change this to specify the cache path
+      - uses: ./.github/actions/melos/
+        name: Install Melos
+        with:
+          melos-version: 6.3.2
+          run-bootstrap: false
+      - name: Format
+        run: melos format --output none --set-exit-if-changed
+      - name: Bootstrap Melos
+        run: melos bootstrap
+      - name: Build Runner Build
+        run: melos build-runner:build:all
+      - name: Analyze
+        run: melos analyze --fatal-infos
+      - name: Tests
+        run: melos test:all
+      - name: SonarCloud Scan
+        # SonarSource/sonarcloud-github-action does not function properly with Dart projects at the moment: https://community.sonarsource.com/t/dart-support-melos-dependency-management/125041
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        working-directory: .
+        run: |
+          export SONAR_SCANNER_VERSION=6.1.0.4477
+          export SONAR_SCANNER_HOME=$HOME/.sonar/sonar-scanner-$SONAR_SCANNER_VERSION-linux-x64
+          curl --create-dirs -sSLo $HOME/.sonar/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONAR_SCANNER_VERSION-linux-x64.zip
+          unzip -o $HOME/.sonar/sonar-scanner.zip -d $HOME/.sonar/
+          export PATH=$SONAR_SCANNER_HOME/bin:$PATH
+          export SONAR_SCANNER_OPTS="-server"
+          sonar-scanner \
+            -Dsonar.host.url=https://sonarcloud.io
+      - name: Build Web
+        run: melos build:web
+      - name: Build Widgetbook
+        run: melos build:widgetbook
+      - uses: actions/upload-artifact@v4
+        name: Upload Widgetbook artifact
+        with:
+          name: widgetbook
+          path: apps/widgetbook/build/web/
+      - uses: actions/upload-artifact@v4
+        name: Upload Zorg Bij Jou web app artifact
+        with:
+          name: web-app
+          path: apps/zorg_bij_jou/build/web/
+
+  deploy_ios_app:
+    if: github.event.inputs.isDeployIosApp == 'true'
+    needs: build
+    runs-on: macos-latest
+    environment: Flutter
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+
+      - uses: ./.github/actions/flutter/
+        name: Install Flutter
+        with:
+          channel: stable
+          cache: true
+          cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:" # optional, change this to force refresh cache
+          cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # optional, change this to specify the cache path
+          pub-cache-key: "flutter-pub:os:-:channel:-:version:-:arch:-:hash:" # optional, change this to force refresh cache of dart pub get dependencies
+          pub-cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # optional, change this to specify the cache path
+
+      - uses: ./.github/actions/melos/
+        name: Install Melos
+        with:
+          run-bootstrap: false
+
+      - name: Bootstrap Melos
+        run: melos bootstrap
+
+      - name: Build Runner Build
+        run: melos build-runner:build:all
+
+      - name: Build iOS
+        working-directory: apps/zorg_bij_jou/ios
+        run: pod install
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Install Fastlane
+        run: gem install fastlane
+
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ secrets.CERTIFICATES_APP_ID }}
+          private-key: ${{ secrets.CERTIFICATES_PRIVATE_KEY }}
+          repositories: "zorg-bij-jou-app-secrets"
+
+      - name: Base64 encode the token
+        id: base64-encode
+        run: |
+          BASE64_TOKEN=$(echo -n "${{ steps.app-token.outputs.app-slug }}[bot]:${{ steps['app-token'].outputs.token }}" | base64)
+          echo "token=$BASE64_TOKEN" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: Build IPA
+        working-directory: apps/zorg_bij_jou
+        run: flutter build ipa --release --no-codesign --dart-define PATIENTS_BFF_HOST=https://api.test.zorgbijjou.com/patients-bff --dart-define APP_INSIGHTS_INSTRUMENTATION_KEY=${{ needs.build.outputs.APP_INSIGHTS_INSTRUMENTATION_KEY }}
+
+      - name: Build IPA using Fastlane
+        working-directory: apps/zorg_bij_jou/ios
+        run: fastlane ios build_ipa
+        env:
+          MATCH_GIT_BASIC_AUTHORIZATION: ${{ steps.base64-encode.outputs.token }}
+          MATCH_PASSWORD: ${{ secrets.ZBJ_MATCH_PASSWORD }}
+          APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.ZBJ_APP_STORE_CONNECT_ISSUER_ID }}
+          APP_STORE_CONNECT_KEY_ID: ${{ secrets.ZBJ_APP_STORE_CONNECT_KEY_ID }}
+          APP_STORE_CONNECT_API_KEY_CONTENT: ${{ secrets.ZBJ_APP_STORE_CONNECT_API_KEY_CONTENT }}
+
+      - name: Release to App Store
+        working-directory: apps/zorg_bij_jou/ios
+        run: fastlane ios release
+        env:
+          APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.ZBJ_APP_STORE_CONNECT_ISSUER_ID }}
+          APP_STORE_CONNECT_KEY_ID: ${{ secrets.ZBJ_APP_STORE_CONNECT_KEY_ID }}
+          APP_STORE_CONNECT_API_KEY_CONTENT: ${{ secrets.ZBJ_APP_STORE_CONNECT_API_KEY_CONTENT }}
+
+  deploy_android_app:
+    if: github.event.inputs.isDeployAndroidApp == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    environment: Flutter
+    env:
+      AAB_PATH: apps/zorg_bij_jou/build/app/outputs/bundle/release/app-release.aab
+
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+
+      - name: Decrypt keystore
+        run: |
+          openssl aes-256-cbc -d -in apps/zorg_bij_jou/android/app/zorgbijjou-patientenapp-release-key.jks.enc -out apps/zorg_bij_jou/android/app/zorgbijjou-patientenapp-release-key.jks -k "${{ secrets.KEYSTORE_ENCRYPTION_KEY }}" -pbkdf2 -iter 100000
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: "17"
+          distribution: "temurin"
+
+      - uses: ./.github/actions/flutter/
+        name: Install Flutter
+        with:
+          channel: stable
+          cache: true
+          cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:" # optional, change this to force refresh cache
+          cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # optional, change this to specify the cache path
+          pub-cache-key: "flutter-pub:os:-:channel:-:version:-:arch:-:hash:" # optional, change this to force refresh cache of dart pub get dependencies
+          pub-cache-path: "${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:" # optional, change this to specify the cache path
+
+      - uses: ./.github/actions/melos/
+        name: Install Melos
+        with:
+          run-bootstrap: false
+
+      - name: Bootstrap Melos
+        run: melos bootstrap
+
+      - name: Build Runner Build
+        run: melos build-runner:build:all
+
+      - name: Build App Bundle
+        working-directory: apps/zorg_bij_jou
+        run: flutter build appbundle --release --dart-define PATIENTS_BFF_HOST=https://api.test.zorgbijjou.com/patients-bff --dart-define APP_INSIGHTS_INSTRUMENTATION_KEY=${{ needs.build.outputs.APP_INSIGHTS_INSTRUMENTATION_KEY }}
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+
+      - name: Compress Native Symbols.
+        working-directory: apps/zorg_bij_jou
+        run: |
+          cd build/app/intermediates/merged_native_libs/release/out/lib
+          zip -r symbols.zip *
+          echo "SYMBOL_PATH=../build/app/intermediates/merged_native_libs/release/out/lib/symbols.zip" >> "$GITHUB_ENV"
+          echo "MAPPING_PATH=../build/app/outputs/mapping/release/mapping.txt" >> "$GITHUB_ENV"
+
+      - name: Upload generated aab to the artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: aab-stores
+          path: ${{ env.AAB_PATH }}
+
+      - name: Deploy to Google Play Internal Track
+        working-directory: apps/zorg_bij_jou/android
+        run: fastlane android deploy_internal_track
+        env:
+          AAB_PATH: "../build/app/outputs/bundle/release/app-release.aab"
+          GOOGLE_PLAY_JSON: ${{ secrets.ZBJ_GOOGLE_PLAY_JSON }}
+          SYMBOL_PATH: ${{ env.SYMBOL_PATH }}
+          MAPPING_PATH: ${{ env.MAPPING_PATH }}

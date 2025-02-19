@@ -1,0 +1,1 @@
+Ja, zonder de Thuismeten app kun je je vragenlijsten en metingen niet doorgeven aan de verpleegkundigen. Zonder deze app kun je helaas niet langer thuismeten via Zorg bij jou.

@@ -1,0 +1,195 @@
+{
+  "frequently-asked-questions": {
+    "ik-heb-geen-uitnodiging": {
+      "order": 0
+    },
+    "kan-ik-stoppen-met-thuismeten": {
+      "order": 1
+    },
+    "hoe-zit-het-met-mijn-privacy": {
+      "order": 2
+    }
+  },
+  "subjects": {
+    "hoe-werkt-thuismeten": {
+      "slug": "hoe-werkt-thuismeten",
+      "title-key": "howDoesHomeMeasurementWork",
+      "order": 0,
+      "image": "assets/images/hoe_werkt_thuismeten.png",
+      "questions": {
+        "beginnen-met-thuismeten": {
+          "order": 0
+        },
+        "wanneer-reageert-de-verpleegkundige": {
+          "order": 1
+        },
+        "kan-ik-stoppen-met-thuismeten": {
+          "order": 2
+        },
+        "hoe-zit-het-met-mijn-privacy": {
+          "order": 3
+        },
+        "waarom-moet-ik-blijven-meten": {
+          "order": 4
+        }
+      }
+    },
+    "thuismeten-app": {
+      "slug": "thuismeten-app",
+      "title-key": "homeMeasurementApp",
+      "order": 1,
+      "image": "assets/images/thuismeten_app.png",
+      "questions": {
+        "hoe-voer-ik-een-meting-uit": {
+          "order": 1
+        },
+        "ik-heb-geen-uitnodiging": {
+          "order": 2
+        },
+        "digitale-toegankelijkheid-thuismeten-app": {
+          "order": 3
+        },
+        "heb-ik-de-thuismeten-app-nodig": {
+          "order": 4
+        }
+      }
+    },
+    "zorg-bij-jou-app": {
+      "slug": "zorg-bij-jou-app",
+      "title-key": "zorgBijJouApp",
+      "order": 2,
+      "image": "assets/images/zorg_bij_jou_app.png",
+      "questions": {
+        "heb-ik-de-zorgbijjou-app-nodig": {
+          "order": 1
+        },
+        "digitale-toegankelijkheid-zorgbijjou-app": {
+          "order": 2
+        }
+      }
+    }
+  },
+  "questions": {
+    "beginnen-met-thuismeten": {
+      "slug": "beginnen-met-thuismeten",
+      "title-key": "beginHomeMeasurement",
+      "modified-date": "2024-08-01",
+      "path": "assets/faq/beginnen-met-thuismeten.md",
+      "related-questions": {
+        "waarom-moet-ik-blijven-meten": {
+          "order": 0
+        },
+        "hoe-voer-ik-een-meting-uit": {
+          "order": 1
+        },
+        "kan-ik-stoppen-met-thuismeten": {
+          "order": 2
+        }
+      }
+    },
+    "wanneer-reageert-de-verpleegkundige": {
+      "slug": "wanneer-reageert-de-verpleegkundige",
+      "title-key": "whenDoesTheNurseRespond",
+      "modified-date": "2024-08-01",
+      "path": "assets/faq/wanneer-reageert-de-verpleegkundige.md"
+    },
+    "kan-ik-stoppen-met-thuismeten": {
+      "slug": "kan-ik-stoppen-met-thuismeten",
+      "title-key": "canIStopHomeMeasurement",
+      "modified-date": "2024-08-01",
+      "path": "assets/faq/kan-ik-stoppen-met-thuismeten.md",
+      "related-questions": {
+        "beginnen-met-thuismeten": {
+          "order": 0
+        },
+        "waarom-moet-ik-blijven-meten": {
+          "order": 1
+        },
+        "hoe-voer-ik-een-meting-uit": {
+          "order": 3
+        }
+      }
+    },
+    "hoe-zit-het-met-mijn-privacy": {
+      "slug": "hoe-zit-het-met-mijn-privacy",
+      "title-key": "howIsMyPrivacy",
+      "modified-date": "2024-08-01",
+      "path": "assets/faq/hoe-zit-het-met-mijn-privacy.md"
+    },
+    "waarom-moet-ik-blijven-meten": {
+      "slug": "waarom-moet-ik-blijven-meten",
+      "title-key": "whyShouldIKeepMeasuring",
+      "modified-date": "2024-08-01",
+      "path": "assets/faq/waarom-moet-ik-blijven-meten.md",
+      "related-questions": {
+        "beginnen-met-thuismeten": {
+          "order": 0
+        },
+        "hoe-voer-ik-een-meting-uit": {
+          "order": 1
+        },
+        "kan-ik-stoppen-met-thuismeten": {
+          "order": 2
+        }
+      }
+    },
+    "hoe-voer-ik-een-meting-uit": {
+      "slug": "hoe-voer-ik-een-meting-uit",
+      "title-key": "howDoIConductAMeasurement",
+      "modified-date": "2024-08-01",
+      "path": "assets/faq/hoe-voer-ik-een-meting-uit.md",
+      "related-questions": {
+        "beginnen-met-thuismeten": {
+          "order": 0
+        },
+        "waarom-moet-ik-blijven-meten": {
+          "order": 1
+        },
+        "kan-ik-stoppen-met-thuismeten": {
+          "order": 2
+        }
+      }
+    },
+    "ik-heb-geen-uitnodiging": {
+      "slug": "ik-heb-geen-uitnodiging",
+      "title-key": "iDidNotReceiveAnInvitation",
+      "modified-date": "2024-08-01",
+      "path": "assets/faq/ik-heb-geen-uitnodiging.md"
+    },
+    "hoe-zorg-ik-voor-geen-meldingen": {
+      "slug": "hoe-zorg-ik-voor-geen-meldingen",
+      "title-key": "howDoIStopNotifications",
+      "modified-date": "2024-08-01",
+      "path": "assets/faq/hoe-zorg-ik-voor-geen-meldingen.md"
+    },
+    "digitale-toegankelijkheid-thuismeten-app": {
+      "slug": "digitale-toegankelijkheid-thuismeten-app",
+      "title-key": "digitalAccessibilityHomeMeasurementsApp",
+      "modified-date": "2024-08-01",
+      "path": "assets/faq/digitale-toegankelijkheid-thuismeten-app.md",
+      "related-questions": {
+        "hoe-zorg-ik-voor-geen-meldingen": {
+          "order": 0
+        }
+      }
+    },
+    "digitale-toegankelijkheid-zorgbijjou-app": {
+      "slug": "digitale-toegankelijkheid-zorgbijjou-app",
+      "title-key": "digitalAccessibilityZorgBijJouApp",
+      "modified-date": "2024-08-01",
+      "path": "assets/faq/digitale-toegankelijkheid-zorgbijjou-app.md"
+    },
+    "heb-ik-de-thuismeten-app-nodig": {
+      "slug": "heb-ik-de-thuismeten-app-nodig",
+      "title-key": "doINeedTheHomeMeasurementsApp",
+      "modified-date": "2024-08-01",
+      "path": "assets/faq/heb-ik-de-thuismeten-app-nodig.md"
+    },
+    "heb-ik-de-zorgbijjou-app-nodig": {
+      "slug": "heb-ik-de-zorgbijjou-app-nodig",
+      "title-key": "doINeedTheZorgBijJouApp",
+      "modified-date": "2024-08-01",
+      "path": "assets/faq/heb-ik-de-zorgbijjou-app-nodig.md"
+    }
+  }
+}

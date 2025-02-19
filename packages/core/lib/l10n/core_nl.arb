@@ -1,0 +1,566 @@
+{
+  "@@locale": "nl",
+  "customerService": "Klantenservice",
+  "@customerService": {
+    "description": "Customer service"
+  },
+  "lastModified": "Laatst bijgewerkt: {date}",
+  "@lastModified": {
+    "description": "Last modified",
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "d MMM y",
+        "isCustomDateFormat": "true"
+      }
+    }
+  },
+  "question": "{count, plural, =0{geen vragen} =1{1 vraag} other{{count} vragen}}",
+  "@question": {
+    "description": "[count|'no'] question(s)",
+    "placeholders": {
+      "count": {
+        "description": "number of questions"
+      }
+    }
+  },
+  "questionsBySubject": "Vragen per onderwerp",
+  "@questionsBySubject": {
+    "description": "Questions  by subject"
+  },
+  "frequentlyAskedQuestions": "Veelgestelde vragen",
+  "@frequentlyAskedQuestions": {
+    "description": "Frequently asked questions"
+  },
+  "contactFooterHeader": "Heb je een andere vraag?",
+  "@contactFooterHeader": {
+    "description": "Contact Footer header"
+  },
+  "contactFooterInformation": "We staan voor je klaar. We zijn er op werkdagen van 08:00 tot 17:00.",
+  "@contactFooterInformation": {
+    "description": "Contact Footer information"
+  },
+  "contactFooterCallUs": "Bel ons",
+  "@contactFooterCallUs": {
+    "description": "Contact Footer call us"
+  },
+  "contactFooterConversation": "Start een gesprek",
+  "@contactFooterConversation": {
+    "description": "Contact Footer start a conversation"
+  },
+  "faqMoreQuestions": "Meer vragen",
+  "@faqMoreQuestions": {
+    "description": "FAQ page more question"
+  },
+  "contentNotAvailable": "De tekst is helaas op dit moment niet beschikbaar",
+  "@contentNotAvailable": {
+    "description": "Content not available"
+  },
+  "noLusciiEmail": "Ik heb geen e-mail van Luscii gekregen, wat nu?",
+  "@noLusciiEmail": {
+    "description": "I did not receive an e-mail from Luscii, now what?"
+  },
+  "noLusciiEmailIntroduction": "Heb je geen e-mail ontvangen? Dat is vervelend. We lossen dit stap voor stap met je op.",
+  "@noLusciiEmailIntroduction": {
+    "description": "You haven't received an e-mail? We're sorry. We will fix this step by step together with you"
+  },
+  "isHomeMeasurementFree": "Is thuismeten van Zorg bij jou gratis?",
+  "@isHomeMeasurementFree": {
+    "description": "Is home measurement by Zorg bij jou free?"
+  },
+  "canIStopHomeMeasurement": "Kan ik stoppen met thuismeten?",
+  "@canIStopHomeMeasurement": {
+    "description": "Can I stop home measurement?"
+  },
+  "howDoesHomeMeasurementWork": "Hoe werkt thuismeten?",
+  "@howDoesHomeMeasurementWork": {
+    "description": "How does home measurement work"
+  },
+  "beginHomeMeasurement": "Wat moet ik doen om te beginnen met thuismeten?",
+  "@beginHomeMeasurement": {
+    "description": "What do I need to do to start home monitoring?"
+  },
+  "whenDoesTheNurseRespond": "Wanneer reageert de verpleegkundige op mijn bericht?",
+  "@whenDoesTheNurseRespond": {
+    "description": "When will the nurse respond to my message?"
+  },
+  "howIsMyPrivacy": "Hoe zit het met mijn privacy?",
+  "@howIsMyPrivacy": {
+    "description": "What about my privacy?"
+  },
+  "whyShouldIKeepMeasuring": "Waarom moet ik blijven meten, zelfs als ik me goed voel?",
+  "@whyShouldIKeepMeasuring": {
+    "description": "Why do I need to continue measuring, even if I feel fine?"
+  },
+  "howDoesHomeMeasurementAppWork": "Hoe werkt de thuismeten app?",
+  "@howDoesHomeMeasurementAppWork": {
+    "description": "How does home measurement app work"
+  },
+  "homeMeasurementApp": "Thuismeten app",
+  "@homeMeasurementApp": {
+    "description": "Home measurement app"
+  },
+  "howDoIConductAMeasurement": "Hoe doe ik een meting in de Thuismeten app?",
+  "@howDoIConductAMeasurement": {
+    "description": "How do I perform a measurement in the Home Monitoring app?"
+  },
+  "iDidNotReceiveAnInvitation": "Ik heb geen uitnodiging voor de Thuismeten app gekregen, wat nu?",
+  "@iDidNotReceiveAnInvitation": {
+    "description": "I haven’t received an invitation for the Home Monitoring app. What should I do?"
+  },
+  "howDoIStopNotifications": "Ik ga op vakantie, hoe zorg ik dat ik tijdelijk geen meldingen krijg?",
+  "@howDoIStopNotifications": {
+    "description": "How can I ensure I don’t receive notifications during my vacation?"
+  },
+  "digitalAccessibilityHomeMeasurementsApp": "Digitale toegankelijkheid en de Thuismeten app",
+  "@digitalAccessibilityHomeMeasurementsApp": {
+    "description": "Digital accessibility of the Home Monitoring app"
+  },
+  "digitalAccessibilityZorgBijJouApp": "Digitale toegankelijkheid en de Zorg bij jou app",
+  "@digitalAccessibilityZorgBijJouApp": {
+    "description": "Digital accessibility of the Zorg bij jou app"
+  },
+  "doINeedTheHomeMeasurementsApp": "Heb ik de Thuismeten app echt nodig?",
+  "@doINeedTheHomeMeasurementsApp": {
+    "description": "Do I really need the Home Monitoring app?"
+  },
+  "doINeedTheZorgBijJouApp": "Heb ik de Zorg bij jou app echt nodig?",
+  "@doINeedTheZorgBijJouApp": {
+    "description": "Do I really need the Zorg bij jou app?"
+  },
+  "zorgBijJouApp": "Zorg bij jou app",
+  "@zorgBijJouApp": {
+    "description": "Zorg bij jou app"
+  },
+  "myHeartRateMonitor": "Mijn hartslagmeter",
+  "@myHeartRateMonitor": {
+    "description": "My heart rate monitor"
+  },
+  "heartFailure": "Hartfalen",
+  "@heartFailure": {
+    "description": "Heart failure"
+  },
+  "homeMeasurementWithHeartFailure": "Thuismeten met hartfalen",
+  "@homeMeasurementWithHeartFailure": {
+    "description": "Home measurement with heart failure"
+  },
+  "zorgBijJou": "Zorg bij jou",
+  "@zorgBijJou": {
+    "description": "Zorg bij jou"
+  },
+  "welcome": "Welkom terug",
+  "@welcome": {
+    "description": "Welkom back"
+  },
+  "localAuthChallengeReason": "Ontgrendel de Zorgbijjou app",
+  "@localAuthChallengeReason": {
+    "description": "Message to see when the user gets the local authentication challenge"
+  },
+  "localAuthCancelButton": "Terug",
+  "@localAuthCancelButton": {
+    "description": "Cancel button when the user gets the local authentication challenge"
+  },
+  "localAuthChallengeAgain": "Ontgrendel de Zorgbijjou app",
+  "@localAuthChallengeAgain": {
+    "description": "Local auth button to give the local auth challenge"
+  },
+  "localAuthToOnboarding": "Terug naar inloggen",
+  "@localAuthToOnboarding": {
+    "description": "Local auth button to go back to onboarding"
+  },
+  "onboardingConditionsHeader": "We hebben je toestemming nodig",
+  "@onboardingConditionsHeader": {
+    "description": "Conditions Summary header for the Onboarding"
+  },
+  "onboardingConditionsExplanation": "Om Zorg bij jou te kunnen gebruiken, moet je akkoord gaan met:",
+  "@onboardingConditionsExplanation": {
+    "description": "Conditions Summary explanation for the Onboarding"
+  },
+  "onboardingConditionsItem1": "Wij verzamelen medische gegevens via vragen of metingen die je doet. Bijvoorbeeld je gewicht of hartslag.",
+  "@onboardingConditionsItem1": {
+    "description": "Conditions Summary bullet item 1"
+  },
+  "onboardingConditionsItem2": "Je gegevens zijn te zien voor de verpleegkundigen en je behandelaar.",
+  "@onboardingConditionsItem2": {
+    "description": "Conditions Summary bullet item 2"
+  },
+  "onboardingConditionsItem3": "Je gegevens worden veilig opgeslagen.",
+  "@onboardingConditionsItem3": {
+    "description": "Conditions Summary bullet item 3"
+  },
+  "onboardingConditionsReadAllButton": "Lees alle voorwaarden",
+  "@onboardingConditionsReadAllButton": {
+    "description": "Conditions Summary read all conditions button"
+  },
+  "onboardingConditionsAgreeButton": "Ik ga akkoord",
+  "@onboardingConditionsAgreeButton": {
+    "description": "Conditions agree button"
+  },
+  "onboardingValidateInformationValidateButton": "Gegevens kloppen",
+  "@onboardingValidateInformationValidateButton": {
+    "description": "Validate information button"
+  },
+  "termsAndConditionsHeader": "Complete voorwaarden",
+  "@termsAndConditionsHeader": {
+    "description": "Terms and Conditions Header"
+  },
+  "onboardingLoginHeader": "We controleren je account",
+  "@onboardingLoginHeader": {
+    "description": "Onboarding login information header"
+  },
+  "onboardingLoginParagraph": "Om de app te gebruiken, vul hier de code in die je hebt ontvangen en je geboortedatum. Zo zorgen we ervoor dat jouw account klopt en veilig is.",
+  "@onboardingLoginParagraph": {
+    "description": "Onboarding login information paragraph"
+  },
+  "loginCodeHeader": "Vul de code in",
+  "@loginCodeHeader": {
+    "description": "Enter the code"
+  },
+  "birthDateAccessibleLabel": "Geboortedatum",
+  "@birthDateAccessibleLabel": {
+    "description": "Birth date accessible label"
+  },
+  "birthDateHeader": "Vul je geboortedatum in (dd-mm-jjjj)",
+  "@birthDateHeader": {
+    "description": "Enter your birth date"
+  },
+  "birthDateExample": "bijv. 09-12-1981",
+  "@birthDateExample": {
+    "description": "Birth date example"
+  },
+  "onboardingShowLoginInformationButton": "Waar kan ik de code vinden?",
+  "@onboardingShowLoginInformationButton": {
+    "description": "Onboarding login information to show login information"
+  },
+  "loginInformationHeader": "Waar kan ik de code vinden?",
+  "@loginInformationHeader": {
+    "description": "Onboarding login information to see where is the code"
+  },
+  "birthDateIncomplete": "Vul alsjeblieft je geboortedatum in.",
+  "@birthDateIncomplete": {
+    "description": "Birth date incomplete"
+  },
+  "loginCodeIncomplete": "Vul alsjeblieft je code in.",
+  "@loginCodeIncomplete": {
+    "description": "Login code is incomplete"
+  },
+  "loginCodeWrong": "Sorry, we herkennen deze code niet. Controleer of je het goed hebt ingevuld.",
+  "@loginCodeWrong": {
+    "description": "Login code is wrong"
+  },
+  "loginAuthenticationErrorTitle": "Dit account wordt niet herkend",
+  "@loginAuthenticationErrorTitle": {
+    "description": "Login authentication error title"
+  },
+  "loginAuthenticationErrorMessage": "Controleer of je de code en je geboortedatum goed hebt ingevuld en probeer het opnieuw.\u2028Werkt het nog steeds niet? Bel dan het Medisch Service Centrum op +31 6 0192837.",
+  "@loginAuthenticationErrorMessage": {
+    "description": "Login authentication error message"
+  },
+  "unexpectedErrorTitle": "Onverwachte fout opgetreden",
+  "@unexpectedErrorTitle": {
+    "description": "Unexpected error title to the patient"
+  },
+  "unexpectedErrorMessage": "Er is een onverwachte fout opgetreden. Controleer je internet verbinding en probeer het opnieuw.",
+  "@unexpectedErrorMessage": {
+    "description": "Unexpected error message to the patient"
+  },
+  "onboardingGettingStartedHeader": "Download de Thuismeten app om te beginnen",
+  "@onboardingGettingStartedHeader": {
+    "description": "Onboarding Getting Started header to tell about the next steps"
+  },
+  "onboardingGettingStartedParagraph1": "De laatste stap is zorgen dat je de Thuismeten-app geïnstalleerd hebt staan op je telefoon.",
+  "@onboardingGettingStartedParagraph1": {
+    "description": "Onboarding Getting Started paragraph 1"
+  },
+  "onboardingGettingStartedParagraph2": "Heb je de Thuismeten-app al geïnstalleerd? Ga dan direct aan de slag met meten in de Zorg bij jou-app.",
+  "@onboardingGettingStartedParagraph2": {
+    "description": "Onboarding Getting Started paragraph 2"
+  },
+  "onboardingGettingStartedParagraph3": "Nog niet de Thuismeten-app geïnstalleerd? Check je e-mail (ook ongewenste e-mail) voor de uitnodiging van Luscii, de ontwikkelaar van de Thuismeten-app, en volg de instructies.",
+  "@onboardingGettingStartedParagraph3": {
+    "description": "Onboarding Getting Started paragraph 3"
+  },
+  "onboardingGettingStartedButton": "Begrepen",
+  "@onboardingGettingStartedButton": {
+    "description": "Getting started button"
+  },
+  "onboardingMultipleAppsIntroductionHeader": "Welkom! Samen houden we jouw gezondheid in de gaten",
+  "@onboardingMultipleAppsIntroductionHeader": {
+    "description": "Onboarding Multiple Apps Introduction header to tell about usage of multiple apps"
+  },
+  "onboardingMultipleAppsIntroductionParagraph": "Voor je behandeling heb je twee apps nodig. We leggen je graag uit wat je met deze apps kan.",
+  "@onboardingMultipleAppsIntroductionParagraph": {
+    "description": "Onboarding Multiple Apps Introduction paragraph to tell about usage of multiple apps"
+  },
+  "onboardingMultipleAppsIntroductionImage": "Afbeelding van twee app-iconen: de eerste met de naam 'Zorg bij jou' en de tweede met de naam 'Thuismeten'.",
+  "@onboardingMultipleAppsIntroductionImage": {
+    "description": "Onboarding Multiple Apps Introduction image to show the two app icons"
+  },
+  "onboardingMultipleAppsZorgBijJouHeader": "Zorg bij jou",
+  "@onboardingMultipleAppsZorgBijJouHeader": {
+    "description": "Onboarding Multiple Apps Zorg bij jou header"
+  },
+  "onboardingMultipleAppsZorgBijJouParagraph": "De Zorg bij jou app (deze app) gebruik je voor:",
+  "@onboardingMultipleAppsZorgBijJouParagraph": {
+      "description": "Onboarding Multiple Apps Zorg bij jou paragraph"
+  },
+  "onboardingMultipleAppsZorgBijJouItem1Title": "Contact met verpleegkundigen.",
+  "@onboardingMultipleAppsZorgBijJouItem1Title": {
+      "description": "Onboarding Multiple Apps Zorg bij jou item 1 title"
+  },
+  "onboardingMultipleAppsZorgBijJouItem1Description": "Heb je zorgen over een meting of andere gezondheidsvragen? Je kunt contact opnemen met de verpleegkundige via deze app. Ook nemen zij contact met jou op bij vragen.",
+  "@onboardingMultipleAppsZorgBijJouItem1Description": {
+      "description": "Onboarding Multiple Apps Zorg bij jou item 1 description"
+  },
+  "onboardingMultipleAppsZorgBijJouItem2Title": "Hulp bij vragen.",
+  "@onboardingMultipleAppsZorgBijJouItem2Title": {
+    "description": "Onboarding Multiple Apps Zorg bij jou item 2 title"
+  },
+  "onboardingMultipleAppsZorgBijJouItem2Description": "Vind snel antwoorden op veelgestelde vragen over bijvoorbeeld het thuismeten en meer.",
+  "@onboardingMultipleAppsZorgBijJouItem2Description": {
+    "description": "Onboarding Multiple Apps Zorg bij jou item 2 description"
+  },
+  "onboardingMultipleAppsHomeMeasurementHeader": "Thuismeten",
+  "@onboardingMultipleAppsHomeMeasurementHeader": {
+    "description": "Onboarding Multiple Apps Home Measurement header"
+  },
+  "onboardingMultipleAppsHomeMeasurementParagraph": "De Thuismeten app helpt je bij het in de gaten houden van je gezondheid:",
+  "@onboardingMultipleAppsHomeMeasurementParagraph": {
+    "description": "Onboarding Multiple Apps Home Measurement paragraph"
+  },
+  "onboardingMultipleAppsHomeMeasurementItem1Title": "Zelf metingen doorgeven.",
+  "@onboardingMultipleAppsHomeMeasurementItem1Title": {
+    "description": "Onboarding Multiple Apps Home Measurement item 1 title"
+  },
+  "onboardingMultipleAppsHomeMeasurementItem1Description": "Geef je gemeten waardes door, zoals je bloedglucose, om je diabetes in de gaten te houden.",
+  "@onboardingMultipleAppsHomeMeasurementItem1Description": {
+    "description": "Onboarding Multiple Apps Home Measurement item 1 description"
+  },
+  "onboardingMultipleAppsHomeMeasurementItem2Title": "Krijg advies.",
+  "@onboardingMultipleAppsHomeMeasurementItem2Title": {
+    "description": "Onboarding Multiple Apps Home Measurement item 2 title"
+  },
+  "onboardingMultipleAppsHomeMeasurementItem2Description": "Met jouw antwoorden en metingen geeft de app je meteen feedback en advies om je diabetes onder controle te houden.",
+  "@onboardingMultipleAppsHomeMeasurementItem2Description": {
+    "description": "Onboarding Multiple Apps Home Measurement item 2 description"
+  },
+  "backButton": "Terug",
+  "@backButton": {
+    "description": "Go Back button"
+  },
+  "nextButtonAccessibilityLabel": "Ga verder",
+  "@nextButtonAccessibilityLabel": {
+    "description": "Next button accessibility label"
+  },
+  "statusBarAccessibilityLabel": "Stap {currentPage} van {totalPages}, actief",
+  "@statusBarAccessibilityLabel": {
+    "description": "Status bar accessibility label to show the current page and the total pages",
+    "placeholders": {
+      "currentPage": {
+        "description": "The current page",
+        "type": "int"
+      },
+      "totalPages": {
+        "description": "Total number of pages",
+        "type": "int"
+      }
+    }
+  },
+  "bottomNavigationService": "Service",
+  "@bottomNavigationService": {
+    "description": "Service"
+  },
+  "conversationTitle": "Gesprek",
+  "@conversationTitle": {
+    "description": "Conversation"
+  },
+  "noConversations": "Geen gesprekken",
+  "@noConversations": {
+    "description": "no conversations in overview"
+  },
+  "conversationNewMessage": "Nieuw",
+  "@conversationNewMessage": {
+    "description": "New message"
+  },
+  "conversationYesterday": "Gisteren",
+  "@conversationYesterday": {
+    "description": "Yesterday"
+  },
+  "conversationTime": "{datetime}",
+  "@conversationTime": {
+    "description": "Localized conversation time",
+    "placeholders": {
+      "datetime": {
+        "type": "DateTime",
+        "format": "H:mm",
+        "isCustomDateFormat": "true"
+      }
+    }
+  },
+  "conversationDateTime": "{datetime}",
+  "@conversationDateTime": {
+    "description": "Localized conversation datetime",
+    "placeholders": {
+      "datetime": {
+        "type": "DateTime",
+        "format": "d MMM y, H:mm",
+        "isCustomDateFormat": "true"
+      }
+    }
+  },
+  "conversationDate": "{date}",
+  "@conversationDate": {
+    "description": "Localized conversation date",
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "d MMM y",
+        "isCustomDateFormat": "true"
+      }
+    }
+  },
+  "conversationAvatarSemanticLabel": "Avatar {name}",
+  "@conversationAvatarSemanticLabel": {
+    "description": "Avatar semantics label",
+    "placeholders": {
+      "name": {
+        "description": "name of the user of the avatar",
+        "type": "String"
+      }
+    }
+  },
+  "conversationFromSystemSemanticLabel": "van de App",
+  "@conversationFromSystemSemanticLabel": {
+    "description": "Conversation message from system user"
+  },
+  "conversationMessageSemanticLabel": "Bericht van {user}. {message}. Ontvangen in {conversation} op {date} {time}.",
+  "@conversationMessageSemanticLabel": {
+    "description": "Localized conversation semantic message",
+    "placeholders": {
+      "user": {
+        "description": "User that sent the message",
+        "type": "String"
+      },
+      "message": {
+        "description": "Contents of the last message in the conversation",
+        "type": "String"
+      },
+      "conversation": {
+        "description": "Conversation title",
+        "type": "String"
+      },
+      "date": {
+        "description": "Date the last message in the conversation was sent",
+        "type": "DateTime",
+        "format": "dMMMMy",
+        "isCustomDateFormat": "true"
+      },
+      "time": {
+        "description": "Time the last message in the conversation was sent",
+        "type": "DateTime",
+        "format": "Hm"
+      }
+    }
+  },
+  "conversationSemanticLabel": "Bericht: {title}. {message}. {date} {time}.{unreadMessages, plural, =0{} =1{ 1 ongelezen bericht.} other{ {unreadMessages} ongelezen berichten.}}",
+  "@conversationSemanticLabel": {
+    "description": "Localized conversation semantic message",
+    "placeholders": {
+      "title": {
+        "description": "Conversation title",
+        "type": "String"
+      },
+      "message": {
+        "description": "Contents of the last message in the conversation",
+        "type": "String"
+      },
+      "date": {
+        "description": "Date the last message in the conversation was sent",
+        "type": "DateTime",
+        "format": "dMMMMy",
+        "isCustomDateFormat": "true"
+      },
+      "time": {
+        "description": "Time the last message in the conversation was sent",
+        "type": "DateTime",
+        "format": "Hm"
+      },
+      "unreadMessages": {
+        "description": "Number of unread messages in the conversation",
+        "type": "int"
+      }
+    }
+  },
+  "conversationNoMessageSemanticLabel": "Bericht: {title}.{unreadMessages, plural, =0{} =1{ 1 ongelezen bericht.} other{ {unreadMessages} ongelezen berichten.}}",
+  "@conversationNoMessageSemanticLabel": {
+    "description": "Localized conversation semantic message",
+    "placeholders": {
+      "title": {
+        "description": "Conversation title",
+        "type": "String"
+      },
+      "unreadMessages": {
+        "description": "Number of unread messages in the conversation",
+        "type": "int"
+      }
+    }
+  },
+  "conversationSendMessageSemanticLabel": "Bericht",
+  "@conversationSendMessageSemanticLabel": {
+    "description": "Send conversation message accessibility label"
+  },
+  "validateInformationSuccessTitle": "Het is gelukt!",
+  "@validateInformationSuccessTitle": {
+    "description": "Title for the success notification banner in validate information"
+  },
+  "validateInformationSuccessContent": "Je account is met succes gecontroleerd.",
+  "@validateInformationSuccessContent": {
+    "description": "Content for the success notification banner in validate information"
+  },
+  "validateInformationRecognizedData": "We herkennen de volgende gegevens:",
+  "@validateInformationRecognizedData": {
+    "description": "Text indicating recognized data in validate information"
+  },
+  "validateInformationHospitalDepartment": "Je ziekenhuis is het {hospitalName} en bent onder behandeling bij {departmentName}",
+  "@validateInformationHospitalDepartment": {
+    "description": "Text indicating hospital and department in validate information",
+    "placeholders": {
+      "hospitalName": {
+        "type": "String",
+        "description": "Name of the hospital"
+      },
+      "departmentName": {
+        "type": "String",
+        "description": "Name of the department"
+      }
+    }
+  },
+  "validateInformationTreatment": "Je krijgt zorg voor {treatmentName}",
+  "@validateInformationTreatment": {
+    "description": "Text indicating treatment in validate information",
+    "placeholders": {
+      "treatmentName": {
+        "type": "String",
+        "description": "Name of the treatment"
+      }
+    }
+  },
+  "validateInformationPatientName": "Je naam is {patientName}",
+  "@validateInformationPatientName": {
+    "description": "Text indicating patient name in validate information",
+    "placeholders": {
+      "patientName": {
+        "type": "String",
+        "description": "Name of the patient"
+      }
+    }
+  },
+  "validateInformationIncorrectButton": "Klopt dit niet?",
+  "@validateInformationIncorrectButton": {
+    "description": "Button text for indicating incorrect information in validate information"
+  },
+  "validateInformationNextButton": "Gegevens kloppen",
+  "@validateInformationNextButton": {
+    "description": "Next button text for indicating correct information in validate information"
+  }
+}
