@@ -59,7 +59,7 @@ class _MultipleAppsHomeMeasurementState
             style: context.tokens.textStyle.tokensTypographyParagraphMd,
           ),
           const SizedBox(height: 24),
-          BulletItem.extra(
+          ZbjBulletItem.extra(
             title: AppLocalizations.of(context)!
                 .onboardingMultipleAppsHomeMeasurementItem1Title,
             label: AppLocalizations.of(context)!
@@ -71,7 +71,7 @@ class _MultipleAppsHomeMeasurementState
             iconBackgroundColor: context.tokens.color.tokensTurqoise50,
           ),
           const SizedBox(height: 16),
-          BulletItem.extra(
+          ZbjBulletItem.extra(
             title: AppLocalizations.of(context)!
                 .onboardingMultipleAppsHomeMeasurementItem2Title,
             label: AppLocalizations.of(context)!

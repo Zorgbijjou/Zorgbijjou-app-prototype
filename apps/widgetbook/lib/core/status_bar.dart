@@ -5,7 +5,7 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 @widgetbook.UseCase(
     name: 'Default',
-    type: StatusBar,
+    type: ZbjStatusBar,
     designLink:
         'https://www.figma.com/design/MtBXGXmFo8CcMmFmtHB1PP/Pati%C3%ABntenapp?node-id=245-9182&t=pDuP8TaChj5gRobi-0',
     path: 'Core')
@@ -19,7 +19,7 @@ Widget buildDefaultStatusBarUseCase(BuildContext context) {
     controller: controller,
     children: List.generate(
       steps,
-      (index) => StatusBar(
+      (index) => ZbjStatusBar(
         pageController: controller,
         steps: steps,
         step: index + 1,

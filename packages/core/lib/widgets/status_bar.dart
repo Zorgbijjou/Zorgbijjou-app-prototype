@@ -5,12 +5,12 @@ import 'package:theme/assets/tokens/tokens.g.dart';
 
 import '../l10n/core_localizations.dart';
 
-class StatusBar extends StatelessWidget {
+class ZbjStatusBar extends StatelessWidget {
   final PageController pageController;
   final int step;
   final int steps;
 
-  const StatusBar({
+  const ZbjStatusBar({
     super.key,
     required this.pageController,
     required this.step,

@@ -3,21 +3,21 @@ import 'package:theme/theme.dart';
 
 import 'grid_sized_box.dart';
 
-class GridPadding extends StatefulWidget {
+class ZbjGridPadding extends StatefulWidget {
   final Widget child;
   final double verticalPadding;
 
-  const GridPadding({
+  const ZbjGridPadding({
     super.key,
     required this.child,
     this.verticalPadding = 0,
   });
 
   @override
-  createState() => GridPaddingState();
+  createState() => ZbjGridPaddingState();
 }
 
-class GridPaddingState extends State<GridPadding> {
+class ZbjGridPaddingState extends State<ZbjGridPadding> {
   @override
   Widget build(BuildContext context) {
     var gridPadding = _getGridPadding(context);
@@ -31,7 +31,7 @@ class GridPaddingState extends State<GridPadding> {
   }
 
   EdgeInsets _getGridPadding(BuildContext context) {
-    var parentState = context.findAncestorWidgetOfExactType<GridSizedBox>();
+    var parentState = context.findAncestorWidgetOfExactType<ZbjGridSizedBox>();
 
     var currentGrid = context.currentGrid;
 
@@ -39,12 +39,12 @@ class GridPaddingState extends State<GridPadding> {
       return EdgeInsets.symmetric(horizontal: currentGrid.columnMargin);
     }
 
-    if (parentState.alignment == GridSizedBoxAlignment.left) {
+    if (parentState.alignment == ZbjGridSizedBoxAlignment.left) {
       return EdgeInsets.only(
           left: currentGrid.columnMargin, right: currentGrid.columnGap);
     }
 
-    if (parentState.alignment == GridSizedBoxAlignment.right) {
+    if (parentState.alignment == ZbjGridSizedBoxAlignment.right) {
       return EdgeInsets.only(
           left: currentGrid.columnGap, right: currentGrid.columnMargin);
     }

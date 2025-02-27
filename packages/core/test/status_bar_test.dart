@@ -19,7 +19,7 @@ void main() {
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate
         ],
-        child: StatusBar(pageController: controller, steps: 5, step: 1),
+        child: ZbjStatusBar(pageController: controller, steps: 5, step: 1),
       ),
     ));
     var indicatorFinder = find.byType(SmoothPageIndicator);
@@ -40,11 +40,12 @@ void main() {
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate
         ],
-        child: StatusBar(pageController: controller, steps: pages, step: step),
+        child:
+            ZbjStatusBar(pageController: controller, steps: pages, step: step),
       ),
     ));
 
-    expect(tester.getSemantics(find.byType(StatusBar)).label,
+    expect(tester.getSemantics(find.byType(ZbjStatusBar)).label,
         'Stap $step van $pages, actief');
   });
 }

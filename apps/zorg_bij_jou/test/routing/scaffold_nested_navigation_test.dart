@@ -56,7 +56,7 @@ void main() {
     ));
 
     expect(find.byType(ScaffoldWithNestedNavigation), findsOneWidget);
-    expect(find.byType(GridOverlay), findsOneWidget);
+    expect(find.byType(ZbjGridOverlay), findsOneWidget);
   });
 
   testWidgets(
@@ -75,7 +75,7 @@ void main() {
     ));
 
     expect(find.byType(ScaffoldWithNestedNavigation), findsOneWidget);
-    expect(find.byType(GridOverlay), findsNothing);
+    expect(find.byType(ZbjGridOverlay), findsNothing);
   });
 
   testWidgets(

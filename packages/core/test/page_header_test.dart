@@ -10,7 +10,7 @@ void main() {
     testWidgets('Should display a title, subtitle, introduction and icon',
         (tester) async {
       await tester.pumpWidget(materialAppWithTokens(
-        child: PageHeader.subLevel(
+        child: ZbjPageHeader.subLevel(
           title: 'Test page header',
           subtitle: 'Some subtitle',
           introduction: 'Test intro',
@@ -34,7 +34,7 @@ void main() {
 
     testWidgets('Should not display avatar and icon', (tester) async {
       await tester.pumpWidget(materialAppWithTokens(
-        child: PageHeader.subLevel(
+        child: ZbjPageHeader.subLevel(
           title: 'Test page header',
         ),
       ));
@@ -52,7 +52,7 @@ void main() {
   group('PageHeader first level', () {
     testWidgets('Should display a title and icon', (tester) async {
       await tester.pumpWidget(materialAppWithTokens(
-        child: PageHeader.firstLevel(
+        child: ZbjPageHeader.firstLevel(
           title: 'Test page header',
           icon: const Icon(CustomIcons.help_circle),
         ),

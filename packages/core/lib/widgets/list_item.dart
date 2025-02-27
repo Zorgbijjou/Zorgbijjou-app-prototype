@@ -2,45 +2,45 @@ import 'package:core/widgets/outlined_focus.dart';
 import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
-enum ListItemPosition { first, middle, last }
+enum ZbjListItemPosition { first, middle, last }
 
-extension PositionCalculation<T> on Iterable<T> {
-  ListItemPosition getListItemPosition(T item) {
+extension ZbjPositionCalculation<T> on Iterable<T> {
+  ZbjListItemPosition getListItemPosition(T item) {
     if (first == item) {
-      return ListItemPosition.first;
+      return ZbjListItemPosition.first;
     }
 
     if (last == item) {
-      return ListItemPosition.last;
+      return ZbjListItemPosition.last;
     }
 
-    return ListItemPosition.middle;
+    return ZbjListItemPosition.middle;
   }
 }
 
-class ListItem extends StatefulWidget {
+class ZbjListItem extends StatefulWidget {
   final String title;
   final bool inverted;
-  final ListItemPosition position;
+  final ZbjListItemPosition position;
   final VoidCallback? onTap;
   final FocusNode? focusNode;
   final IconData icon;
 
-  const ListItem({
+  const ZbjListItem({
     super.key,
     required this.title,
     this.onTap,
     this.inverted = false,
-    this.position = ListItemPosition.middle,
+    this.position = ZbjListItemPosition.middle,
     this.focusNode,
     this.icon = Icons.arrow_forward_rounded,
   });
 
   @override
-  State<ListItem> createState() => _ListItemState();
+  State<ZbjListItem> createState() => _ZbjListItemState();
 }
 
-class _ListItemState extends State<ListItem> {
+class _ZbjListItemState extends State<ZbjListItem> {
   var focusNode = FocusNode();
   var isHovered = false;
   var isHighlighted = false;
@@ -59,7 +59,7 @@ class _ListItemState extends State<ListItem> {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedFocus(
+    return ZbjOutlinedFocus(
       focusNode: focusNode,
       builder: (context, showFocus) => Semantics(
         button: true,
@@ -81,9 +81,9 @@ class _ListItemState extends State<ListItem> {
           child: Padding(
             padding: EdgeInsets.fromLTRB(
               0,
-              widget.position == ListItemPosition.first ? 0 : 24,
+              widget.position == ZbjListItemPosition.first ? 0 : 24,
               0,
-              widget.position == ListItemPosition.last ? 0 : 24,
+              widget.position == ZbjListItemPosition.last ? 0 : 24,
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,

@@ -2,13 +2,13 @@ import 'package:core/styles/state_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:theme/assets/tokens/tokens.g.dart';
 
-class ColoredButtonStyle extends ButtonStyle {
-  final StateColors foregroundColors;
-  final StateColors backgroundColors;
+class ZbjColoredButtonStyle extends ButtonStyle {
+  final ZbjStateColors foregroundColors;
+  final ZbjStateColors backgroundColors;
   final bool hasBorder;
 
-  factory ColoredButtonStyle.primaryButtonStyle(BuildContext context) {
-    return ColoredButtonStyle(
+  factory ZbjColoredButtonStyle.primaryButtonStyle(BuildContext context) {
+    return ZbjColoredButtonStyle(
       context,
       foregroundColors: ForegroundColors(
         defaultColor: Colors.white,
@@ -21,8 +21,8 @@ class ColoredButtonStyle extends ButtonStyle {
     );
   }
 
-  factory ColoredButtonStyle.secondaryButtonStyle(BuildContext context) {
-    return ColoredButtonStyle(
+  factory ZbjColoredButtonStyle.secondaryButtonStyle(BuildContext context) {
+    return ZbjColoredButtonStyle(
       context,
       hasBorder: true,
       foregroundColors: ForegroundColors(
@@ -38,8 +38,8 @@ class ColoredButtonStyle extends ButtonStyle {
     );
   }
 
-  factory ColoredButtonStyle.subtleButtonStyle(BuildContext context) {
-    return ColoredButtonStyle(
+  factory ZbjColoredButtonStyle.subtleButtonStyle(BuildContext context) {
+    return ZbjColoredButtonStyle(
       context,
       foregroundColors: ForegroundColors(
         defaultColor: context.tokens.color.tokensTurqoise600,
@@ -54,8 +54,8 @@ class ColoredButtonStyle extends ButtonStyle {
     );
   }
 
-  factory ColoredButtonStyle.brandButtonStyle(BuildContext context) {
-    return ColoredButtonStyle(
+  factory ZbjColoredButtonStyle.brandButtonStyle(BuildContext context) {
+    return ZbjColoredButtonStyle(
       context,
       foregroundColors: ForegroundColors(defaultColor: Colors.white),
       backgroundColors: BackgroundColors(
@@ -66,19 +66,19 @@ class ColoredButtonStyle extends ButtonStyle {
     );
   }
 
-  ColoredButtonStyle(
+  ZbjColoredButtonStyle(
     BuildContext context, {
     this.hasBorder = false,
     required ForegroundColors foregroundColors,
     required BackgroundColors backgroundColors,
-  })  : foregroundColors = StateColors(
+  })  : foregroundColors = ZbjStateColors(
           defaultColor: foregroundColors.defaultColor,
           activeColor: foregroundColors.activeColor,
           hoverColor: foregroundColors.hoverColor,
           // focused color the same for all styles
           focusedColor: context.tokens.color.tokensGrey800,
         ),
-        backgroundColors = StateColors(
+        backgroundColors = ZbjStateColors(
           defaultColor: backgroundColors.defaultColor,
           activeColor: backgroundColors.activeColor,
           hoverColor: backgroundColors.hoverColor,
@@ -114,7 +114,7 @@ class ColoredButtonStyle extends ButtonStyle {
   }
 }
 
-class ForegroundColors extends StateColors {
+class ForegroundColors extends ZbjStateColors {
   ForegroundColors({
     required super.defaultColor,
     super.activeColor,
@@ -122,7 +122,7 @@ class ForegroundColors extends StateColors {
   });
 }
 
-class BackgroundColors extends StateColors {
+class BackgroundColors extends ZbjStateColors {
   BackgroundColors({
     required super.defaultColor,
     super.activeColor,

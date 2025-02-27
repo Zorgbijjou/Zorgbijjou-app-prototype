@@ -3,14 +3,14 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
-class DottedBorderShape extends ShapeBorder {
+class ZbjDottedBorderShape extends ShapeBorder {
   final Color color;
   final double strokeWidth;
   final double dashWidth;
   final double dashSpace;
   final BorderRadius borderRadius;
 
-  const DottedBorderShape({
+  const ZbjDottedBorderShape({
     required this.color,
     required this.strokeWidth,
     required this.dashWidth,
@@ -18,11 +18,11 @@ class DottedBorderShape extends ShapeBorder {
     this.borderRadius = BorderRadius.zero,
   });
 
-  factory DottedBorderShape.focusRing(
+  factory ZbjDottedBorderShape.focusRing(
     BuildContext context, {
     BorderRadius borderRadius = BorderRadius.zero,
   }) {
-    return DottedBorderShape(
+    return ZbjDottedBorderShape(
       color: context.tokens.color.tokensGrey800,
       strokeWidth: 2.0,
       dashWidth: 2.0,
@@ -86,7 +86,7 @@ class DottedBorderShape extends ShapeBorder {
 
   @override
   ShapeBorder scale(double t) {
-    return DottedBorderShape(
+    return ZbjDottedBorderShape(
       color: color,
       strokeWidth: strokeWidth * t,
       dashWidth: dashWidth * t,

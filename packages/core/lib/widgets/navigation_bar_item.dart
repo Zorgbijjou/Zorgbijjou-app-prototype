@@ -57,7 +57,7 @@ class ZbjNavigationBarItemWidgetState
       ),
       child: Material(
         color: Colors.transparent,
-        child: OutlinedFocus(
+        child: ZbjOutlinedFocus(
           focusNode: focusNode,
           builder: (context, showFocus) => Semantics(
             label:

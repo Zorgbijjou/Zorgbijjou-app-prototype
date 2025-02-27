@@ -8,7 +8,7 @@ import 'helpers.dart';
 void main() {
   testWidgets('Should format markdown', (tester) async {
     await tester.pumpWidget(materialAppWithTokens(
-        child: const Markdown(
+        child: const ZbjMarkdown(
       content: '# Test',
     )));
 
@@ -21,7 +21,7 @@ void main() {
 
   testWidgets('Should render link text', (tester) async {
     await tester.pumpWidget(materialAppWithTokens(
-        child: const Markdown(
+        child: const ZbjMarkdown(
       content: '[link stuff](https://www.example.com)',
     )));
 
@@ -34,7 +34,7 @@ void main() {
 
   testWidgets('Should read link as semantic link', (tester) async {
     await tester.pumpWidget(materialAppWithTokens(
-        child: const Markdown(
+        child: const ZbjMarkdown(
       content: '[link stuff](https://www.example.com)',
     )));
 

@@ -59,7 +59,7 @@ class _MultipleAppsZorgBijJouState
             style: context.tokens.textStyle.tokensTypographyParagraphMd,
           ),
           const SizedBox(height: 24),
-          BulletItem.extra(
+          ZbjBulletItem.extra(
             title: AppLocalizations.of(context)!
                 .onboardingMultipleAppsZorgBijJouItem1Title,
             label: AppLocalizations.of(context)!
@@ -71,7 +71,7 @@ class _MultipleAppsZorgBijJouState
             iconBackgroundColor: context.tokens.color.tokensTurqoise50,
           ),
           const SizedBox(height: 16),
-          BulletItem.extra(
+          ZbjBulletItem.extra(
             title: AppLocalizations.of(context)!
                 .onboardingMultipleAppsZorgBijJouItem2Title,
             label: AppLocalizations.of(context)!

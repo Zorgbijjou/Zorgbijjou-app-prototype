@@ -152,7 +152,7 @@ class _ConversationComponentState extends State<ConversationComponent>
   }
 
   Widget buildMessagesWidget(BuildContext context) {
-    Widget build = GridPadding(
+    Widget build = ZbjGridPadding(
       verticalPadding: 24,
       child: Column(
         children: [
@@ -173,7 +173,7 @@ class _ConversationComponentState extends State<ConversationComponent>
 
               return Padding(
                 padding: const EdgeInsets.only(bottom: 24.0),
-                child: CustomDivider.label(
+                child: ZbjDivider.label(
                   label: AppLocalizations.of(context)!.conversationNewMessage,
                   color: context.tokens.color.tokensTurqoise700,
                 ),
@@ -206,7 +206,7 @@ class _ConversationComponentState extends State<ConversationComponent>
           ),
         ),
       ),
-      child: GridPadding(
+      child: ZbjGridPadding(
         verticalPadding: 12,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.end,

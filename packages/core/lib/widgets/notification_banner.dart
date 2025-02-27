@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:theme/assets/icons/custom_icons.dart';
 import 'package:theme/assets/tokens/tokens.g.dart';
 
-class NotificationBanner extends StatefulWidget {
+class ZbjNotificationBanner extends StatefulWidget {
   final String title;
   final String content;
   final IconData? icon;
@@ -12,7 +12,7 @@ class NotificationBanner extends StatefulWidget {
   final Color Function(BuildContext) iconColor;
   final bool closable;
 
-  const NotificationBanner._({
+  const ZbjNotificationBanner._({
     required this.title,
     required this.content,
     required this.icon,
@@ -23,12 +23,12 @@ class NotificationBanner extends StatefulWidget {
   });
 
   /// Negative banner factory
-  factory NotificationBanner.negative({
+  factory ZbjNotificationBanner.negative({
     required String title,
     required String content,
     bool closable = false,
   }) {
-    return NotificationBanner._(
+    return ZbjNotificationBanner._(
       title: title,
       content: content,
       icon: CustomIcons.alert_octagon,
@@ -40,12 +40,12 @@ class NotificationBanner extends StatefulWidget {
   }
 
   /// Positive banner factory
-  factory NotificationBanner.positive({
+  factory ZbjNotificationBanner.positive({
     required String title,
     required String content,
     bool closable = false,
   }) {
-    return NotificationBanner._(
+    return ZbjNotificationBanner._(
       title: title,
       content: content,
       icon: CustomIcons.check_circle,
@@ -57,10 +57,10 @@ class NotificationBanner extends StatefulWidget {
   }
 
   @override
-  State<NotificationBanner> createState() => _NotificationBannerState();
+  State<ZbjNotificationBanner> createState() => _ZbjNotificationBannerState();
 }
 
-class _NotificationBannerState extends State<NotificationBanner>
+class _ZbjNotificationBannerState extends State<ZbjNotificationBanner>
     with SingleTickerProviderStateMixin {
   bool _isVisible = true;
 

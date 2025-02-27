@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
-enum GridSizedBoxAlignment {
+enum ZbjGridSizedBoxAlignment {
   left,
   right,
 }
 
-class GridSizedBox extends StatelessWidget {
+class ZbjGridSizedBox extends StatelessWidget {
   final Widget? child;
   final int defaultColumnSpan;
   final Map<GridSize, int> columnSpans;
@@ -14,9 +14,9 @@ class GridSizedBox extends StatelessWidget {
 
   // This property is used by the GridPadding widget in order
   // to determine the padding to apply to the left or right side of the child widget.
-  final GridSizedBoxAlignment alignment;
+  final ZbjGridSizedBoxAlignment alignment;
 
-  const GridSizedBox({
+  const ZbjGridSizedBox({
     super.key,
     this.child,
     required this.defaultColumnSpan,

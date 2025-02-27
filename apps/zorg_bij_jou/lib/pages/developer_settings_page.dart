@@ -20,8 +20,8 @@ class DeveloperSettingsPage extends ConsumerWidget {
       body: Column(
         children: [
           const SizedBox(height: 24),
-          PageHeader.subLevel(
-            appBar: CustomAppBar(
+          ZbjPageHeader.subLevel(
+            appBar: ZbjAppBar(
               onPressed: () => Navigator.of(context).pop(),
             ),
             title: 'Developer Settings',
@@ -31,23 +31,23 @@ class DeveloperSettingsPage extends ConsumerWidget {
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
             child: Column(
               children: [
-                ListItem(
+                ZbjListItem(
                   title: 'Restart Onboarding',
                   icon: Icons.delete_outline_outlined,
                   onTap: () {
                     _onRestartOnboarding(context, ref);
                   },
                 ),
-                CustomDivider.standard(),
-                ListItem(
+                ZbjDivider.standard(),
+                ZbjListItem(
                   title: 'Disable Developer Mode',
                   icon: Icons.power_settings_new_rounded,
                   onTap: () {
                     _onDisableDevMode(context, ref);
                   },
                 ),
-                CustomDivider.standard(),
-                ListItem(
+                ZbjDivider.standard(),
+                ZbjListItem(
                   title:
                       '${isGridOverlayEnabled ? 'Disable' : 'Enable'} Grid Overlay',
                   icon: Icons.grid_on,
@@ -55,8 +55,8 @@ class DeveloperSettingsPage extends ConsumerWidget {
                     _onToggleGridOverlay(context, ref);
                   },
                 ),
-                CustomDivider.standard(),
-                ListItem(
+                ZbjDivider.standard(),
+                ZbjListItem(
                   title:
                       '${isLocalAuthEnabled ? 'Disable' : 'Enable'} Local Auth',
                   icon: Icons.security,

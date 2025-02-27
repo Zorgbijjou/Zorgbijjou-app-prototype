@@ -88,7 +88,7 @@ class MessageComponent extends StatelessWidget {
                         ),
                         const SizedBox(height: 8),
                       ],
-                      Markdown(content: message.text),
+                      ZbjMarkdown(content: message.text),
                       const SizedBox(height: 8),
                       Align(
                         alignment: Alignment.centerRight,
@@ -135,7 +135,7 @@ class MessageComponent extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Markdown(content: message.text),
+              ZbjMarkdown(content: message.text),
               const SizedBox(height: 8),
               Align(
                 alignment: Alignment.centerRight,
@@ -167,7 +167,7 @@ class MessageComponent extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Markdown(content: message.text),
+            ZbjMarkdown(content: message.text),
             const SizedBox(height: 8),
             Align(
               alignment: Alignment.centerRight,

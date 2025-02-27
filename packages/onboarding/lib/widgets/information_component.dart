@@ -52,7 +52,7 @@ class InformationComponent extends StatelessWidget {
                               .tokens.textStyle.tokensTypographyHeading2xl,
                         ),
                         const SizedBox(height: 24),
-                        Markdown(content: content ?? ''),
+                        ZbjMarkdown(content: content ?? ''),
                       ],
                     ),
                   ),

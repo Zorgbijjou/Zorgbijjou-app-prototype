@@ -1,1 +1,1 @@
-enum Appearance { brand, primary, secondary, subtle }
+enum ZbjAppearance { brand, primary, secondary, subtle }

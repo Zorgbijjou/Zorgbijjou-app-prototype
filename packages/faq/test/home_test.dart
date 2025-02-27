@@ -88,7 +88,7 @@ void main() {
               ))));
       await tester.pumpAndSettle();
 
-      var devModeIconFinder = find.byType(IconWithDevModeButton);
+      var devModeIconFinder = find.byType(ZbjIconWithDevModeButton);
 
       for (var i = 0; i < 5; i++) {
         await tester.tap(devModeIconFinder);

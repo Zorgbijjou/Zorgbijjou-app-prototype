@@ -36,7 +36,7 @@ class _TermsAndConditionsSummaryState
             style: context.tokens.textStyle.tokensTypographyParagraphMd,
           ),
           const SizedBox(height: 24),
-          BulletItem.icon(
+          ZbjBulletItem.icon(
             label: AppLocalizations.of(context)!.onboardingConditionsItem2,
             icon: Icon(
               CustomIcons.glasses_02,
@@ -44,7 +44,7 @@ class _TermsAndConditionsSummaryState
             ),
           ),
           const SizedBox(height: 16),
-          BulletItem.icon(
+          ZbjBulletItem.icon(
             label: AppLocalizations.of(context)!.onboardingConditionsItem3,
             icon: Icon(
               CustomIcons.lock_01,

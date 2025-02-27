@@ -280,7 +280,7 @@ class _CodeInputFieldState extends State<_CodeInputField> {
         if (widget.state.hasError)
           Padding(
             padding: const EdgeInsets.only(bottom: 8.0),
-            child: FormFieldErrorMessage(
+            child: ZbjFormFieldErrorMessage(
               errorText: widget.state.errorText!,
             ),
           ),

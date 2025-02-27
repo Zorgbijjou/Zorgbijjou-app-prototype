@@ -15,7 +15,7 @@ class MockCallback extends Mock {
 void main() {
   testWidgets('Should contain a label', (tester) async {
     await tester.pumpWidget(materialAppWithTokens(
-        child: StackedButton.primary(
+        child: ZbjStackedButton.primary(
       label: 'Test',
       onPressed: () {},
     )));
@@ -29,7 +29,7 @@ void main() {
     var clicked = false;
 
     await tester.pumpWidget(materialAppWithTokens(
-        child: StackedButton.primary(
+        child: ZbjStackedButton.primary(
       label: 'Test',
       onPressed: () {
         clicked = true;
@@ -44,7 +44,7 @@ void main() {
 
   testWidgets('Should render icons', (tester) async {
     await tester.pumpWidget(materialAppWithTokens(
-        child: StackedButton.primary(
+        child: ZbjStackedButton.primary(
       label: 'Test',
       icon: const Icon(CustomIcons.arrow_right),
       onPressed: () {},
@@ -60,7 +60,7 @@ void main() {
     var tokens = DefaultTokens();
     await tester.pumpWidget(materialAppWithTokens(
       tokens: tokens,
-      child: StackedButton.primary(
+      child: ZbjStackedButton.primary(
         label: 'Test',
         onPressed: () {},
       ),
@@ -74,8 +74,8 @@ void main() {
 
     expect(focusWidget, findsOneWidget);
 
-    expect(
-        tester.widget<Material>(focusWidget).shape, isA<DottedBorderShape>());
+    expect(tester.widget<Material>(focusWidget).shape,
+        isA<ZbjDottedBorderShape>());
   });
 
   testWidgets('Should handle keyboard interaction and call onTap',
@@ -83,7 +83,7 @@ void main() {
     var mockCallback = MockCallback();
 
     await tester.pumpWidget(materialAppWithTokens(
-      child: StackedButton.primary(
+      child: ZbjStackedButton.primary(
         label: 'Test',
         onPressed: mockCallback.call,
       ),
@@ -96,8 +96,8 @@ void main() {
     var focusWidget = find.byKey(const Key('outlined_focus'));
 
     expect(focusWidget, findsOneWidget);
-    expect(
-        tester.widget<Material>(focusWidget).shape, isA<DottedBorderShape>());
+    expect(tester.widget<Material>(focusWidget).shape,
+        isA<ZbjDottedBorderShape>());
 
     // Simulate a user pressing the Enter key to call the onTap function
     await tester.sendKeyEvent(LogicalKeyboardKey.enter);

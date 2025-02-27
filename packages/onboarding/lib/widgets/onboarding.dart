@@ -191,7 +191,7 @@ class _OnboardingState extends State<Onboarding> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              StatusBar(
+              ZbjStatusBar(
                 pageController: widget.viewModel.pageController,
                 steps: totalSteps,
                 step: currentStep,

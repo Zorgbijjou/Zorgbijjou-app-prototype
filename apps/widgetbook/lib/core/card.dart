@@ -5,12 +5,12 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 @widgetbook.UseCase(
     name: 'Default',
-    type: Card,
+    type: ZbjCard,
     designLink:
         'https://www.figma.com/design/Vg3ewXzIdLINWXMKMe14yN/Zorg-bij-jou-Components?node-id=847-865&t=Mmpl3ODptnI6vseh-4',
     path: 'Core')
 Widget buildPrimaryCardUseCase(BuildContext context) {
-  return Card.primary(
+  return ZbjCard.primary(
     title: context.knobs
         .string(label: 'Title', initialValue: 'Hoe werkt thuismeten?'),
     subTitle: context.knobs.string(label: 'Subtitle', initialValue: '1 vraag'),
@@ -33,17 +33,17 @@ Widget buildPrimaryCardUseCase(BuildContext context) {
 
 @widgetbook.UseCase(
     name: 'Large',
-    type: Card,
+    type: ZbjCard,
     designLink:
         'https://www.figma.com/design/MtBXGXmFo8CcMmFmtHB1PP/Pati%C3%ABntenapp?node-id=280-6626&t=KyUC7FDzDlyaS9rU-0',
     path: 'Core')
 Widget buildLargeCardUseCase(BuildContext context) {
-  return Card.large(
+  return ZbjCard.large(
     title: context.knobs
         .string(label: 'Title', initialValue: 'Hoe werkt thuismeten?'),
     subTitle: context.knobs.string(label: 'Subtitle', initialValue: '1 vraag'),
     label: context.knobs.boolean(label: 'With Label', initialValue: true)
-        ? const Label(label: 'Label', icon: Icons.workspace_premium_outlined)
+        ? const ZbjLabel(label: 'Label', icon: Icons.workspace_premium_outlined)
         : null,
     body: context.knobs.boolean(label: 'With body', initialValue: true)
         ? const Wrap(crossAxisAlignment: WrapCrossAlignment.center, children: [

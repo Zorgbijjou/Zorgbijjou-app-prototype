@@ -56,8 +56,8 @@ class RelatedQuestions extends StatelessWidget {
           var question = questions[index];
           return SizedBox(
             width: 256,
-            child: Card.large(
-              label: const Label(label: 'Label'),
+            child: ZbjCard.large(
+              label: const ZbjLabel(label: 'Label'),
               title: translationRepository.translate(
                   Localizations.localeOf(context).languageCode,
                   question.titleKey),

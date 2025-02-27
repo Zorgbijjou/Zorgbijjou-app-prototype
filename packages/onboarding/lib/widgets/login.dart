@@ -128,13 +128,13 @@ class LoginState extends State<Login> {
 
   Widget buildErrorNotificationBanner(LoginError error) {
     if (error == LoginError.authenticationError) {
-      return NotificationBanner.negative(
+      return ZbjNotificationBanner.negative(
         title: AppLocalizations.of(context)!.loginAuthenticationErrorTitle,
         content: AppLocalizations.of(context)!.loginAuthenticationErrorMessage,
       );
     }
 
-    return NotificationBanner.negative(
+    return ZbjNotificationBanner.negative(
       title: AppLocalizations.of(context)!.unexpectedErrorTitle,
       content: AppLocalizations.of(context)!.unexpectedErrorMessage,
     );

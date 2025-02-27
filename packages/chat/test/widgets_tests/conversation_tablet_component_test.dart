@@ -160,7 +160,7 @@ void main() {
     // display header
     expect(
       find.descendant(
-        of: find.byType(SubLevelPageHeader),
+        of: find.byType(ZbjSubLevelPageHeader),
         matching: find.text(conversations[0].practitioner),
       ),
       findsOneWidget,
@@ -168,7 +168,7 @@ void main() {
 
     expect(
       find.descendant(
-        of: find.byType(SubLevelPageHeader),
+        of: find.byType(ZbjSubLevelPageHeader),
         matching: find.byType(AvatarComponent),
       ),
       findsOneWidget,

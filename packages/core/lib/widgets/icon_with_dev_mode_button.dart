@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
-class IconWithDevModeButton extends StatefulWidget {
+class ZbjIconWithDevModeButton extends StatefulWidget {
   final Widget icon;
   final bool devModeEnabled;
   final VoidCallback onDevModeEnabled;
   final VoidCallback onDevButtonClick;
 
-  const IconWithDevModeButton({
+  const ZbjIconWithDevModeButton({
     super.key,
     required this.icon,
     required this.devModeEnabled,
@@ -16,10 +16,11 @@ class IconWithDevModeButton extends StatefulWidget {
   });
 
   @override
-  IconWithDevModeButtonState createState() => IconWithDevModeButtonState();
+  ZbjIconWithDevModeButtonState createState() =>
+      ZbjIconWithDevModeButtonState();
 }
 
-class IconWithDevModeButtonState extends State<IconWithDevModeButton> {
+class ZbjIconWithDevModeButtonState extends State<ZbjIconWithDevModeButton> {
   int _clickCount = 0;
   DateTime? _firstClickTime;
 

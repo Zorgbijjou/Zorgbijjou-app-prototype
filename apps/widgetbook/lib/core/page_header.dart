@@ -7,7 +7,7 @@ import 'package:widgetbook_workspace/icons.dart';
 
 @widgetbook.UseCase(
     name: 'Page Header - Sub Level',
-    type: PageHeader,
+    type: ZbjPageHeader,
     designLink:
         'https://www.figma.com/design/Vg3ewXzIdLINWXMKMe14yN/Zorg-bij-jou-Components?node-id=847-865&t=Mmpl3ODptnI6vseh-4',
     path: 'Core')
@@ -16,7 +16,7 @@ Widget buildPageHeaderSubLevelUseCase(BuildContext context) {
       color: context.knobs.boolean(label: 'Inverted')
           ? context.tokens.color.tokensTurqoise600
           : context.tokens.color.tokensWhite,
-      child: PageHeader.subLevel(
+      child: ZbjPageHeader.subLevel(
         title: context.knobs.string(
             label: 'Title',
             initialValue: 'Ik heb geen e-mail van Luscii gekregen, wat nu?'),
@@ -35,7 +35,7 @@ Widget buildPageHeaderSubLevelUseCase(BuildContext context) {
 
 @widgetbook.UseCase(
     name: 'Page Header - First Level',
-    type: PageHeader,
+    type: ZbjPageHeader,
     designLink:
         'https://www.figma.com/design/Vg3ewXzIdLINWXMKMe14yN/Zorg-bij-jou-Components?node-id=847-865&t=Mmpl3ODptnI6vseh-4',
     path: 'Core')
@@ -44,7 +44,7 @@ Widget buildPageHeaderFirstLevelUseCase(BuildContext context) {
       color: context.knobs.boolean(label: 'Inverted')
           ? context.tokens.color.tokensTurqoise600
           : context.tokens.color.tokensWhite,
-      child: PageHeader.firstLevel(
+      child: ZbjPageHeader.firstLevel(
         title: context.knobs.string(
             label: 'Title',
             initialValue: 'Ik heb geen e-mail van Luscii gekregen, wat nu?'),

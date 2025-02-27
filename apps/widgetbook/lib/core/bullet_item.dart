@@ -15,14 +15,14 @@ String labelKnob(BuildContext context) {
 
 @widgetbook.UseCase(
     name: 'Default',
-    type: BulletItem,
+    type: ZbjBulletItem,
     designLink:
         'https://www.figma.com/design/MtBXGXmFo8CcMmFmtHB1PP/Pati%C3%ABntenapp?node-id=570-3625&node-type=FRAME',
     path: 'Core')
 Widget buildBulletItemUseCase(BuildContext context) {
   return Container(
     color: context.tokens.color.tokensWhite,
-    child: BulletItem.bullet(
+    child: ZbjBulletItem.bullet(
       label: labelKnob(context),
     ),
   );
@@ -30,14 +30,14 @@ Widget buildBulletItemUseCase(BuildContext context) {
 
 @widgetbook.UseCase(
     name: 'Icon',
-    type: BulletItem,
+    type: ZbjBulletItem,
     designLink:
         'https://www.figma.com/design/MtBXGXmFo8CcMmFmtHB1PP/Pati%C3%ABntenapp?node-id=570-3625&node-type=FRAME',
     path: 'Core')
 Widget buildBulletIconItemUseCase(BuildContext context) {
   return Container(
     color: context.tokens.color.tokensWhite,
-    child: BulletItem.icon(
+    child: ZbjBulletItem.icon(
       label: labelKnob(context),
       icon: iconKnob(context: context),
     ),
@@ -46,14 +46,14 @@ Widget buildBulletIconItemUseCase(BuildContext context) {
 
 @widgetbook.UseCase(
     name: 'Extra',
-    type: BulletItem,
+    type: ZbjBulletItem,
     designLink:
         'https://www.figma.com/design/MtBXGXmFo8CcMmFmtHB1PP/Pati%C3%ABntenapp?node-id=570-3625&node-type=FRAME',
     path: 'Core')
 Widget buildExtraIconItemUseCase(BuildContext context) {
   return Container(
     color: context.tokens.color.tokensWhite,
-    child: BulletItem.extra(
+    child: ZbjBulletItem.extra(
       label: labelKnob(context),
       icon: iconKnob(context: context),
       iconBackgroundColor: context.knobs.color(

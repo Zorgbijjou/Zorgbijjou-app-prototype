@@ -11,7 +11,7 @@ void main() {
 
     await tester.pumpWidget(
       materialAppWithTokens(
-        child: const FormFieldErrorMessage(
+        child: const ZbjFormFieldErrorMessage(
           errorText: errorText,
         ),
       ),
@@ -26,7 +26,7 @@ void main() {
     const errorText = 'This is an error message';
 
     await tester.pumpWidget(materialAppWithTokens(
-      child: const FormFieldErrorMessage(
+      child: const ZbjFormFieldErrorMessage(
         errorText: errorText,
       ),
     ));

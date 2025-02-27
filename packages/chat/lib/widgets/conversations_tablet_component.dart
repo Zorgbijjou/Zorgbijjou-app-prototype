@@ -31,7 +31,7 @@ class ConversationsTabletComponent extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              PageHeader.firstLevel(
+              ZbjPageHeader.firstLevel(
                   title: 'Gesprek',
                   icon: Icon(
                     CustomIcons.message_text_square_02,
@@ -43,8 +43,8 @@ class ConversationsTabletComponent extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    GridSizedBox(
-                      alignment: GridSizedBoxAlignment.left,
+                    ZbjGridSizedBox(
+                      alignment: ZbjGridSizedBoxAlignment.left,
                       defaultColumnSpan: 3,
                       columnSpans: const {GridSize.lg: 5, GridSize.xl: 5},
                       child: Container(
@@ -99,8 +99,8 @@ class ConversationsTabletComponent extends StatelessWidget {
                         }),
                       ),
                     ),
-                    GridSizedBox(
-                      alignment: GridSizedBoxAlignment.right,
+                    ZbjGridSizedBox(
+                      alignment: ZbjGridSizedBoxAlignment.right,
                       defaultColumnSpan: 3,
                       columnSpans: const {
                         GridSize.lg: 7,
@@ -109,7 +109,7 @@ class ConversationsTabletComponent extends StatelessWidget {
                       includeGutter: true,
                       child: activeConversationViewModel != null
                           ? ConversationComponent(
-                              pageHeader: PageHeader.subLevel(
+                              pageHeader: ZbjPageHeader.subLevel(
                                 title: activeConversationViewModel!
                                     .practitionerName,
                                 avatar: AvatarComponent.medium(

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
-class Label extends StatelessWidget {
+class ZbjLabel extends StatelessWidget {
   final String label;
   final IconData? icon;
 
-  const Label({super.key, required this.label, this.icon});
+  const ZbjLabel({super.key, required this.label, this.icon});
 
   @override
   Widget build(BuildContext context) {

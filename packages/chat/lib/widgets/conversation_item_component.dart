@@ -76,7 +76,7 @@ class _ConversationItemComponentState extends State<ConversationItemComponent> {
 
     return Container(
       color: backgroundColor(isSelected, hasUnreadMessages),
-      child: OutlinedFocus(
+      child: ZbjOutlinedFocus(
         focusNode: focusNode,
         builder: (context, showFocus) => Semantics(
           label: widget.semanticsLabel(context),
@@ -90,7 +90,7 @@ class _ConversationItemComponentState extends State<ConversationItemComponent> {
             hoverColor: context.tokens.color.tokensTurqoise100,
             focusColor: context.tokens.color.tokensYellow300,
             focusNode: focusNode,
-            child: GridPadding(
+            child: ZbjGridPadding(
               child: Container(
                 padding: const EdgeInsets.symmetric(
                   vertical: 24,

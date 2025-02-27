@@ -7,7 +7,7 @@ import 'helpers.dart';
 void main() {
   testWidgets('Should contain title, content and icon', (tester) async {
     await tester.pumpWidget(materialAppWithTokens(
-      child: NotificationBanner.negative(
+      child: ZbjNotificationBanner.negative(
         title: 'A Title',
         content: 'The content',
       ),
@@ -21,7 +21,7 @@ void main() {
 
   testWidgets('Should contain title, content and icon', (tester) async {
     await tester.pumpWidget(materialAppWithTokens(
-      child: NotificationBanner.positive(
+      child: ZbjNotificationBanner.positive(
         title: 'A Title',
         content: 'The content',
       ),
@@ -35,7 +35,7 @@ void main() {
 
   testWidgets('Should contain close button', (tester) async {
     await tester.pumpWidget(materialAppWithTokens(
-      child: NotificationBanner.negative(
+      child: ZbjNotificationBanner.negative(
         title: 'A Title',
         content: 'The content',
         closable: true,
@@ -48,7 +48,7 @@ void main() {
   testWidgets('Should close banner when close button is clicked',
       (tester) async {
     await tester.pumpWidget(materialAppWithTokens(
-      child: NotificationBanner.negative(
+      child: ZbjNotificationBanner.negative(
         title: 'A Title',
         content: 'The content',
         closable: true,

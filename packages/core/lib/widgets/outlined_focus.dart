@@ -1,13 +1,13 @@
 import 'package:core/shapes/dotted_border_shape.dart';
 import 'package:flutter/material.dart';
 
-class OutlinedFocus extends StatefulWidget {
+class ZbjOutlinedFocus extends StatefulWidget {
   final Function(BuildContext context, bool showFocus) builder;
   final BorderRadius borderRadius;
   final FocusNode focusNode;
   final bool suppressOutlineFocus;
 
-  const OutlinedFocus({
+  const ZbjOutlinedFocus({
     super.key,
     required this.builder,
     required this.focusNode,
@@ -16,10 +16,10 @@ class OutlinedFocus extends StatefulWidget {
   });
 
   @override
-  State<OutlinedFocus> createState() => _OutlinedFocusState();
+  State<ZbjOutlinedFocus> createState() => _ZbjOutlinedFocusState();
 }
 
-class _OutlinedFocusState extends State<OutlinedFocus> {
+class _ZbjOutlinedFocusState extends State<ZbjOutlinedFocus> {
   bool showFocus = false;
 
   @override
@@ -70,7 +70,7 @@ class _OutlinedFocusState extends State<OutlinedFocus> {
       key: const Key('outlined_focus'),
       color: Colors.transparent,
       shape: showFocus && !widget.suppressOutlineFocus
-          ? DottedBorderShape.focusRing(
+          ? ZbjDottedBorderShape.focusRing(
               context,
               borderRadius: widget.borderRadius,
             )

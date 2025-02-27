@@ -19,7 +19,7 @@ void main() {
 
       await tester.pumpWidget(materialAppWithTokens(
           child: Material(
-              child: LocaleSelector(
+              child: ZbjLocaleSelector(
         locale: currentLocale,
         supportedLocales: allLocales,
         onLocaleChanged: mockLocaleChangedCallback.call,

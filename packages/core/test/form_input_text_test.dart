@@ -34,8 +34,8 @@ void main() {
 
     // Verify the widget renders correctly
     expect(find.byType(TextFormField), findsOneWidget);
-    expect(find.byType(OutlinedFocus), findsOneWidget);
-    expect(material.shape, isA<DottedBorderShape>());
+    expect(find.byType(ZbjOutlinedFocus), findsOneWidget);
+    expect(material.shape, isA<ZbjDottedBorderShape>());
   });
 
   testWidgets('ZbjFormInputText suppresses the outline focus',
@@ -215,7 +215,7 @@ void main() {
     await tester.pumpAndSettle();
 
     var errorTextFinder = find.text('Error');
-    var errorWidgetFinder = find.byType(FormFieldErrorMessage);
+    var errorWidgetFinder = find.byType(ZbjFormFieldErrorMessage);
 
     expect(errorTextFinder, findsNothing);
     expect(errorWidgetFinder, findsNothing);
@@ -258,7 +258,7 @@ void main() {
     await tester.pumpAndSettle();
 
     var errorTextFinder = find.text('Error');
-    var errorWidgetFinder = find.byType(FormFieldErrorMessage);
+    var errorWidgetFinder = find.byType(ZbjFormFieldErrorMessage);
 
     expect(errorTextFinder, findsNothing);
     expect(errorWidgetFinder, findsNothing);

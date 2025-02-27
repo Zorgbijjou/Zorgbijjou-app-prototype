@@ -56,7 +56,7 @@ class ZbjFormInputTextField extends StatelessWidget {
             if (field.hasError && field.errorText != null)
               Padding(
                 padding: const EdgeInsets.only(bottom: 8.0),
-                child: FormFieldErrorMessage(errorText: field.errorText!),
+                child: ZbjFormFieldErrorMessage(errorText: field.errorText!),
               ),
             SizedBox(
               width: inputWidth,

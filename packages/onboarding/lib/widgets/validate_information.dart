@@ -33,7 +33,7 @@ class ValidateInformationState extends State<ValidateInformation> {
         children: [
           Padding(
             padding: const EdgeInsets.only(bottom: 24),
-            child: NotificationBanner.positive(
+            child: ZbjNotificationBanner.positive(
               title:
                   AppLocalizations.of(context)!.validateInformationSuccessTitle,
               content: AppLocalizations.of(context)!
@@ -46,7 +46,7 @@ class ValidateInformationState extends State<ValidateInformation> {
             style: context.tokens.textStyle.tokensTypographyHeadingXl,
           ),
           const SizedBox(height: 24),
-          BulletItem.icon(
+          ZbjBulletItem.icon(
             label: AppLocalizations.of(context)!
                 .validateInformationHospitalDepartment(
                     widget.viewModel.hospitalName,
@@ -57,7 +57,7 @@ class ValidateInformationState extends State<ValidateInformation> {
             ),
           ),
           const SizedBox(height: 16),
-          BulletItem.icon(
+          ZbjBulletItem.icon(
             label: AppLocalizations.of(context)!
                 .validateInformationTreatment(widget.viewModel.treatmentName),
             icon: Icon(
@@ -66,7 +66,7 @@ class ValidateInformationState extends State<ValidateInformation> {
             ),
           ),
           const SizedBox(height: 16),
-          BulletItem.icon(
+          ZbjBulletItem.icon(
             label: AppLocalizations.of(context)!
                 .validateInformationPatientName(widget.viewModel.patientName),
             icon: Icon(

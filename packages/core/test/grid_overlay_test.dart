@@ -10,7 +10,7 @@ void main() {
         home: Scaffold(
           body: SizedBox(
             width: 500,
-            child: GridOverlay(),
+            child: ZbjGridOverlay(),
           ),
         ),
       ));

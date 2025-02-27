@@ -4,7 +4,7 @@ import 'package:core/widgets/outlined_focus.dart';
 import 'package:flutter/material.dart';
 
 class ZbjIconButton extends StatefulWidget {
-  final Appearance appearance;
+  final ZbjAppearance appearance;
   final Function() onPressed;
   final Widget icon;
   final String? tooltip;
@@ -27,7 +27,7 @@ class ZbjIconButton extends StatefulWidget {
     FocusNode? focusNode,
   }) {
     return ZbjIconButton._internal(
-      appearance: Appearance.brand,
+      appearance: ZbjAppearance.brand,
       onPressed: onPressed,
       icon: icon,
       tooltip: tooltip,
@@ -44,7 +44,7 @@ class ZbjIconButton extends StatefulWidget {
   }) {
     return ZbjIconButton._internal(
       key: key,
-      appearance: Appearance.primary,
+      appearance: ZbjAppearance.primary,
       onPressed: onPressed,
       icon: icon,
       tooltip: tooltip,
@@ -61,7 +61,7 @@ class ZbjIconButton extends StatefulWidget {
   }) {
     return ZbjIconButton._internal(
       key: key,
-      appearance: Appearance.secondary,
+      appearance: ZbjAppearance.secondary,
       onPressed: onPressed,
       icon: icon,
       tooltip: tooltip,
@@ -78,7 +78,7 @@ class ZbjIconButton extends StatefulWidget {
   }) {
     return ZbjIconButton._internal(
       key: key,
-      appearance: Appearance.subtle,
+      appearance: ZbjAppearance.subtle,
       onPressed: onPressed,
       icon: icon,
       tooltip: tooltip,
@@ -101,7 +101,7 @@ class _ZbjIconButtonState extends State<ZbjIconButton> {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedFocus(
+    return ZbjOutlinedFocus(
       focusNode: focusNode,
       borderRadius: BorderRadius.circular(24),
       builder: (context, showFocus) {
@@ -112,13 +112,13 @@ class _ZbjIconButtonState extends State<ZbjIconButton> {
 
   Widget _buildIconButton(BuildContext context) {
     switch (widget.appearance) {
-      case Appearance.brand:
+      case ZbjAppearance.brand:
         return _buildBrandIconButton(context);
-      case Appearance.primary:
+      case ZbjAppearance.primary:
         return _buildPrimaryIconButton(context);
-      case Appearance.secondary:
+      case ZbjAppearance.secondary:
         return _buildSecondaryIconButton(context);
-      case Appearance.subtle:
+      case ZbjAppearance.subtle:
         return _buildSubtleIconButton(context);
     }
   }
@@ -128,8 +128,8 @@ class _ZbjIconButtonState extends State<ZbjIconButton> {
       fixedSize: const Size(48, 48),
     );
 
-    var buttonStyle =
-        ColoredButtonStyle.subtleButtonStyle(context).getButtonStyle(baseStyle);
+    var buttonStyle = ZbjColoredButtonStyle.subtleButtonStyle(context)
+        .getButtonStyle(baseStyle);
 
     return IconButton(
       onPressed: widget.onPressed,
@@ -145,7 +145,7 @@ class _ZbjIconButtonState extends State<ZbjIconButton> {
       fixedSize: const Size(48, 48),
     );
 
-    var buttonStyle = ColoredButtonStyle.secondaryButtonStyle(context)
+    var buttonStyle = ZbjColoredButtonStyle.secondaryButtonStyle(context)
         .getButtonStyle(baseStyle);
 
     return IconButton.outlined(
@@ -162,7 +162,7 @@ class _ZbjIconButtonState extends State<ZbjIconButton> {
       fixedSize: const Size(48, 48),
     );
 
-    var buttonStyle = ColoredButtonStyle.primaryButtonStyle(context)
+    var buttonStyle = ZbjColoredButtonStyle.primaryButtonStyle(context)
         .getButtonStyle(baseStyle);
 
     return IconButton(
@@ -179,8 +179,8 @@ class _ZbjIconButtonState extends State<ZbjIconButton> {
       fixedSize: const Size(48, 48),
     );
 
-    var buttonStyle =
-        ColoredButtonStyle.brandButtonStyle(context).getButtonStyle(baseStyle);
+    var buttonStyle = ZbjColoredButtonStyle.brandButtonStyle(context)
+        .getButtonStyle(baseStyle);
 
     return IconButton(
       onPressed: widget.onPressed,

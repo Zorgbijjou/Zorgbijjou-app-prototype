@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
-@widgetbook.UseCase(name: 'Markdown', type: md.Markdown, path: 'Core')
+@widgetbook.UseCase(name: 'Markdown', type: md.ZbjMarkdown, path: 'Core')
 Widget buildBrandButtonUseCase(BuildContext context) {
   return SingleChildScrollView(
-      child: md.Markdown(
+      child: md.ZbjMarkdown(
     content: context.knobs.string(
         label: 'Content',
         initialValue: '''

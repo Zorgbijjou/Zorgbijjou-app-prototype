@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:theme/assets/tokens/tokens.g.dart';
 
-abstract class CustomDivider extends StatelessWidget {
-  const CustomDivider._();
+abstract class ZbjDivider extends StatelessWidget {
+  const ZbjDivider._();
 
-  factory CustomDivider.standard() {
+  factory ZbjDivider.standard() {
     return _PrimaryDivider(
         colorBuilder: (context) =>
             context.tokens.color.tokensWhite.withValues(alpha: 0.32));
   }
 
-  factory CustomDivider.inverted() {
+  factory ZbjDivider.inverted() {
     return _PrimaryDivider(
         colorBuilder: (context) =>
             context.tokens.color.tokensGrey800.withValues(alpha: 0.32));
   }
 
-  factory CustomDivider.label({required String label, required Color color}) {
+  factory ZbjDivider.label({required String label, required Color color}) {
     return _LabelDivider(label: label, color: color);
   }
 }
 
-class _PrimaryDivider extends CustomDivider {
+class _PrimaryDivider extends ZbjDivider {
   final Color Function(BuildContext) colorBuilder;
 
   const _PrimaryDivider({
@@ -37,7 +37,7 @@ class _PrimaryDivider extends CustomDivider {
   }
 }
 
-class _LabelDivider extends CustomDivider {
+class _LabelDivider extends ZbjDivider {
   final String label;
   final Color color;
 

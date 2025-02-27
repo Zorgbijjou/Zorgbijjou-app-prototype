@@ -140,6 +140,6 @@ void main() {
 
     // Assert
     expect(find.text('translated-${question.titleKey}'), findsOneWidget);
-    expect(find.byType(Card), findsOneWidget);
+    expect(find.byType(ZbjCard), findsOneWidget);
   });
 }

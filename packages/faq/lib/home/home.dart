@@ -42,10 +42,10 @@ class Home extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                PageHeader.firstLevel(
+                ZbjPageHeader.firstLevel(
                   title: AppLocalizations.of(context)!.customerService,
                   inverted: true,
-                  icon: IconWithDevModeButton(
+                  icon: ZbjIconWithDevModeButton(
                     icon: Icon(
                       CustomIcons.help_circle,
                       color: context.tokens.color.tokensYellow200,
@@ -59,7 +59,7 @@ class Home extends StatelessWidget {
                 Container(
                   color: context.tokens.color.tokensTurqoise800,
                   width: double.infinity,
-                  child: GridPadding(
+                  child: ZbjGridPadding(
                     verticalPadding: 32,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -84,7 +84,7 @@ class Home extends StatelessWidget {
                 Container(
                   color: context.tokens.color.tokensWhite,
                   width: double.infinity,
-                  child: GridPadding(
+                  child: ZbjGridPadding(
                     verticalPadding: 32,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -127,8 +127,8 @@ class Home extends StatelessWidget {
         });
   }
 
-  Card _createSubjectCardFromSubject(BuildContext context, Subject subject) {
-    return Card.primary(
+  ZbjCard _createSubjectCardFromSubject(BuildContext context, Subject subject) {
+    return ZbjCard.primary(
       title: translationRepository.translate(
           Localizations.localeOf(context).languageCode, subject.titleKey),
       subTitle:
@@ -144,11 +144,11 @@ class Home extends StatelessWidget {
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: questions.length,
-      separatorBuilder: (context, index) => CustomDivider.inverted(),
+      separatorBuilder: (context, index) => ZbjDivider.inverted(),
       itemBuilder: (context, index) {
         var question = questions[index];
 
-        return ListItem(
+        return ZbjListItem(
           title: translationRepository.translate(
               Localizations.localeOf(context).languageCode, question.titleKey),
           position: questions.getListItemPosition(question),

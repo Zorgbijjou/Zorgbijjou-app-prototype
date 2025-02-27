@@ -9,7 +9,7 @@ void main() {
   group('Divider', () {
     testWidgets('Should render a divider', (tester) async {
       await tester
-          .pumpWidget(materialAppWithTokens(child: CustomDivider.standard()));
+          .pumpWidget(materialAppWithTokens(child: ZbjDivider.standard()));
 
       var dividerFinder = find.byType(Divider);
 
@@ -22,7 +22,7 @@ void main() {
 
     testWidgets('Should render an inverted divider', (tester) async {
       await tester
-          .pumpWidget(materialAppWithTokens(child: CustomDivider.inverted()));
+          .pumpWidget(materialAppWithTokens(child: ZbjDivider.inverted()));
 
       var dividerFinder = find.byType(Divider);
 
@@ -36,7 +36,7 @@ void main() {
     testWidgets('Should render a label and divider on each side',
         (tester) async {
       await tester.pumpWidget(materialAppWithTokens(
-          child: CustomDivider.label(label: 'Text', color: Colors.red)));
+          child: ZbjDivider.label(label: 'Text', color: Colors.red)));
 
       expect(find.byType(Divider), findsExactly(2));
       expect(find.text('Text'), findsOneWidget);

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class StateColors {
+class ZbjStateColors {
   final Color defaultColor;
   final Color? activeColor;
   final Color? hoverColor;
   final Color? focusedColor;
 
-  const StateColors({
+  const ZbjStateColors({
     required this.defaultColor,
     this.activeColor,
     this.hoverColor,

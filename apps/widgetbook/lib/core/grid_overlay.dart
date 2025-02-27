@@ -4,7 +4,7 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 @widgetbook.UseCase(
   name: 'Extra Small (xs)',
-  type: GridOverlay,
+  type: ZbjGridOverlay,
   path: 'Core',
 )
 Widget buildExtraSmallGridOverlayUseCase(BuildContext context) {
@@ -12,13 +12,13 @@ Widget buildExtraSmallGridOverlayUseCase(BuildContext context) {
     color: Colors.white,
     width: 400,
     height: 800,
-    child: const GridOverlay(),
+    child: const ZbjGridOverlay(),
   );
 }
 
 @widgetbook.UseCase(
   name: 'Small (sm)',
-  type: GridOverlay,
+  type: ZbjGridOverlay,
   path: 'Core',
 )
 Widget buildSmallGridOverlayUseCase(BuildContext context) {
@@ -26,13 +26,13 @@ Widget buildSmallGridOverlayUseCase(BuildContext context) {
     color: Colors.white,
     width: 600,
     height: 800,
-    child: const GridOverlay(),
+    child: const ZbjGridOverlay(),
   );
 }
 
 @widgetbook.UseCase(
   name: 'Medium (md)',
-  type: GridOverlay,
+  type: ZbjGridOverlay,
   path: 'Core',
 )
 Widget buildMediumGridOverlayUseCase(BuildContext context) {
@@ -40,13 +40,13 @@ Widget buildMediumGridOverlayUseCase(BuildContext context) {
     color: Colors.white,
     width: 800,
     height: 800,
-    child: const GridOverlay(),
+    child: const ZbjGridOverlay(),
   );
 }
 
 @widgetbook.UseCase(
   name: 'Large (lg)',
-  type: GridOverlay,
+  type: ZbjGridOverlay,
   path: 'Core',
 )
 Widget buildLargeGridOverlayUseCase(BuildContext context) {
@@ -54,13 +54,13 @@ Widget buildLargeGridOverlayUseCase(BuildContext context) {
     color: Colors.white,
     width: 1100,
     height: 800,
-    child: const GridOverlay(),
+    child: const ZbjGridOverlay(),
   );
 }
 
 @widgetbook.UseCase(
   name: 'Extra Large (xl)',
-  type: GridOverlay,
+  type: ZbjGridOverlay,
   path: 'Core',
 )
 Widget buildExtraLargeGridOverlayUseCase(BuildContext context) {
@@ -68,6 +68,6 @@ Widget buildExtraLargeGridOverlayUseCase(BuildContext context) {
     color: Colors.white,
     width: 1400,
     height: 800,
-    child: const GridOverlay(),
+    child: const ZbjGridOverlay(),
   );
 }

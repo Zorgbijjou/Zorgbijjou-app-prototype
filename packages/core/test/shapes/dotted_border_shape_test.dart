@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   group('DottedBorderShape', () {
     test('Dimensions should be based on strokeWidth', () {
-      const dottedBorder = DottedBorderShape(
+      const dottedBorder = ZbjDottedBorderShape(
         color: Colors.black,
         strokeWidth: 4.0,
         dashWidth: 3.0,
@@ -17,7 +17,7 @@ void main() {
     });
 
     test('getOuterPath should return correct path for rect', () {
-      const dottedBorder = DottedBorderShape(
+      const dottedBorder = ZbjDottedBorderShape(
         color: Colors.black,
         strokeWidth: 2.0,
         dashWidth: 2.0,
@@ -34,7 +34,7 @@ void main() {
 
     test('getOuterPath should return rounded rect for non-zero borderRadius',
         () {
-      const dottedBorder = DottedBorderShape(
+      const dottedBorder = ZbjDottedBorderShape(
         color: Colors.black,
         strokeWidth: 2.0,
         dashWidth: 2.0,
@@ -52,7 +52,7 @@ void main() {
     });
 
     test('getInnerPath should return deflated path', () {
-      const dottedBorder = DottedBorderShape(
+      const dottedBorder = ZbjDottedBorderShape(
         color: Colors.black,
         strokeWidth: 4.0,
         dashWidth: 2.0,
@@ -68,7 +68,7 @@ void main() {
     });
 
     test('scale should correctly scale border properties', () {
-      const dottedBorder = DottedBorderShape(
+      const dottedBorder = ZbjDottedBorderShape(
         color: Colors.black,
         strokeWidth: 2.0,
         dashWidth: 2.0,
@@ -76,8 +76,8 @@ void main() {
         borderRadius: BorderRadius.all(Radius.circular(4.0)),
       );
 
-      DottedBorderShape scaledBorder =
-          dottedBorder.scale(2.0) as DottedBorderShape;
+      ZbjDottedBorderShape scaledBorder =
+          dottedBorder.scale(2.0) as ZbjDottedBorderShape;
 
       // The strokeWidth, dashWidth, dashSpace, and borderRadius should all be scaled
       expect(scaledBorder.strokeWidth, 4.0);

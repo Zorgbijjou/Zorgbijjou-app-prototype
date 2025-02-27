@@ -5,14 +5,14 @@ import 'package:theme/assets/tokens/tokens.g.dart';
 
 import 'outlined_focus.dart';
 
-class StackedButton extends StatefulWidget {
+class ZbjStackedButton extends StatefulWidget {
   final String label;
-  final Appearance appearance;
+  final ZbjAppearance appearance;
   final Function() onPressed;
   final bool fill;
   final Widget? icon;
 
-  const StackedButton._internal({
+  const ZbjStackedButton._internal({
     super.key,
     required this.label,
     required this.appearance,
@@ -21,7 +21,7 @@ class StackedButton extends StatefulWidget {
     required this.icon,
   });
 
-  factory StackedButton.primary({
+  factory ZbjStackedButton.primary({
     Key? key,
     required String label,
     required Function() onPressed,
@@ -29,9 +29,9 @@ class StackedButton extends StatefulWidget {
     Widget? icon,
     FocusNode? focusNode,
   }) {
-    return StackedButton._internal(
+    return ZbjStackedButton._internal(
       key: key,
-      appearance: Appearance.primary,
+      appearance: ZbjAppearance.primary,
       label: label,
       onPressed: onPressed,
       fill: fill,
@@ -40,15 +40,15 @@ class StackedButton extends StatefulWidget {
   }
 
   @override
-  State<StackedButton> createState() => _StackedButtonState();
+  State<ZbjStackedButton> createState() => _ZbjStackedButtonState();
 }
 
-class _StackedButtonState extends State<StackedButton> {
+class _ZbjStackedButtonState extends State<ZbjStackedButton> {
   final focusNode = FocusNode();
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedFocus(
+    return ZbjOutlinedFocus(
       focusNode: focusNode,
       borderRadius: BorderRadius.circular(8.0),
       builder: (context, showFocus) => _buildButton(context),
@@ -57,10 +57,10 @@ class _StackedButtonState extends State<StackedButton> {
 
   Widget _buildButton(BuildContext context) {
     switch (widget.appearance) {
-      case Appearance.brand:
-      case Appearance.secondary:
-      case Appearance.subtle:
-      case Appearance.primary:
+      case ZbjAppearance.brand:
+      case ZbjAppearance.secondary:
+      case ZbjAppearance.subtle:
+      case ZbjAppearance.primary:
         return _buildPrimaryButton(context);
     }
   }
@@ -77,7 +77,7 @@ class _StackedButtonState extends State<StackedButton> {
       alignment: Alignment.centerLeft,
     );
 
-    var buttonStyle = ColoredButtonStyle(context,
+    var buttonStyle = ZbjColoredButtonStyle(context,
         foregroundColors: ForegroundColors(
           defaultColor: context.tokens.color.tokensTurqoise600,
           hoverColor: context.tokens.color.tokensTurqoise700,

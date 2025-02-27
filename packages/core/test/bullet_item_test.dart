@@ -8,7 +8,7 @@ import 'helpers.dart';
 void main() {
   testWidgets('Should contain a label', (tester) async {
     await tester.pumpWidget(
-        materialAppWithTokens(child: BulletItem.bullet(label: 'Test')));
+        materialAppWithTokens(child: ZbjBulletItem.bullet(label: 'Test')));
 
     var labelFinder = find.text('Test');
 
@@ -17,7 +17,7 @@ void main() {
 
   testWidgets('Should contain a bullet', (tester) async {
     await tester.pumpWidget(
-        materialAppWithTokens(child: BulletItem.bullet(label: 'Test')));
+        materialAppWithTokens(child: ZbjBulletItem.bullet(label: 'Test')));
 
     var labelFinder = find.text('•');
     await tester.tap(labelFinder);
@@ -27,7 +27,7 @@ void main() {
 
   testWidgets('Should render icons', (tester) async {
     await tester.pumpWidget(materialAppWithTokens(
-        child: BulletItem.icon(
+        child: ZbjBulletItem.icon(
       label: 'Test',
       icon: const Icon(CustomIcons.arrow_right),
     )));
@@ -39,7 +39,7 @@ void main() {
 
   testWidgets('Extra should show background color around icon', (tester) async {
     await tester.pumpWidget(materialAppWithTokens(
-        child: BulletItem.extra(
+        child: ZbjBulletItem.extra(
       label: 'Test',
       icon: const Icon(CustomIcons.arrow_right),
       iconBackgroundColor: Colors.red,
@@ -56,7 +56,7 @@ void main() {
   // should render title
   testWidgets('Should render title', (tester) async {
     await tester.pumpWidget(materialAppWithTokens(
-        child: BulletItem.extra(
+        child: ZbjBulletItem.extra(
       title: 'Title',
       label: 'Test',
       icon: const Icon(CustomIcons.arrow_right),

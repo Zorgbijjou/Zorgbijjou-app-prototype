@@ -6,20 +6,20 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   group('DottedInputBorderShape', () {
     test('copyWith should return new instance with updated BorderSide', () {
-      DottedBorderShape originalShape = const DottedBorderShape(
+      ZbjDottedBorderShape originalShape = const ZbjDottedBorderShape(
         color: Colors.black,
         strokeWidth: 2.0,
         dashWidth: 3.0,
         dashSpace: 3.0,
       );
 
-      DottedInputBorderShape border =
-          DottedInputBorderShape(dottedShape: originalShape);
+      ZbjDottedInputBorderShape border =
+          ZbjDottedInputBorderShape(dottedShape: originalShape);
 
       // Copy with new BorderSide
-      DottedInputBorderShape updatedBorder = border.copyWith(
+      ZbjDottedInputBorderShape updatedBorder = border.copyWith(
         borderSide: const BorderSide(color: Colors.red, width: 4.0),
-      ) as DottedInputBorderShape;
+      ) as ZbjDottedInputBorderShape;
 
       expect(updatedBorder.dottedShape.color, Colors.red);
       expect(updatedBorder.dottedShape.strokeWidth, 4.0);
@@ -30,45 +30,45 @@ void main() {
     });
 
     test('copyWith without BorderSide should return the same shape', () {
-      DottedBorderShape originalShape = const DottedBorderShape(
+      ZbjDottedBorderShape originalShape = const ZbjDottedBorderShape(
         color: Colors.black,
         strokeWidth: 2.0,
         dashWidth: 3.0,
         dashSpace: 3.0,
       );
-      DottedInputBorderShape border =
-          DottedInputBorderShape(dottedShape: originalShape);
+      ZbjDottedInputBorderShape border =
+          ZbjDottedInputBorderShape(dottedShape: originalShape);
 
       // Call copyWith without passing a BorderSide
-      DottedInputBorderShape newBorder =
-          border.copyWith() as DottedInputBorderShape;
+      ZbjDottedInputBorderShape newBorder =
+          border.copyWith() as ZbjDottedInputBorderShape;
 
       // Expect the original and new shapes to be equal
       expect(newBorder.dottedShape, originalShape);
     });
 
     test('dimensions should return the dimensions of the dottedShape', () {
-      DottedBorderShape dottedShape = const DottedBorderShape(
+      ZbjDottedBorderShape dottedShape = const ZbjDottedBorderShape(
         color: Colors.black,
         strokeWidth: 4.0,
         dashWidth: 3.0,
         dashSpace: 3.0,
       );
-      DottedInputBorderShape border =
-          DottedInputBorderShape(dottedShape: dottedShape);
+      ZbjDottedInputBorderShape border =
+          ZbjDottedInputBorderShape(dottedShape: dottedShape);
 
       expect(border.dimensions, const EdgeInsets.all(4.0));
     });
 
     test('getInnerPath should return inner path of dottedShape', () {
-      DottedBorderShape dottedShape = const DottedBorderShape(
+      ZbjDottedBorderShape dottedShape = const ZbjDottedBorderShape(
         color: Colors.black,
         strokeWidth: 2.0,
         dashWidth: 3.0,
         dashSpace: 3.0,
       );
-      DottedInputBorderShape border =
-          DottedInputBorderShape(dottedShape: dottedShape);
+      ZbjDottedInputBorderShape border =
+          ZbjDottedInputBorderShape(dottedShape: dottedShape);
 
       Rect rect = const Rect.fromLTWH(0, 0, 100, 50);
       Path innerPath = border.getInnerPath(rect);
@@ -77,14 +77,14 @@ void main() {
     });
 
     test('getOuterPath should return outer path of dottedShape', () {
-      DottedBorderShape dottedShape = const DottedBorderShape(
+      ZbjDottedBorderShape dottedShape = const ZbjDottedBorderShape(
         color: Colors.black,
         strokeWidth: 2.0,
         dashWidth: 3.0,
         dashSpace: 3.0,
       );
-      DottedInputBorderShape border =
-          DottedInputBorderShape(dottedShape: dottedShape);
+      ZbjDottedInputBorderShape border =
+          ZbjDottedInputBorderShape(dottedShape: dottedShape);
 
       Rect rect = const Rect.fromLTWH(0, 0, 100, 50);
       Path outerPath = border.getOuterPath(rect);
@@ -93,17 +93,17 @@ void main() {
     });
 
     test('scale should correctly scale the dottedShape', () {
-      DottedBorderShape dottedShape = const DottedBorderShape(
+      ZbjDottedBorderShape dottedShape = const ZbjDottedBorderShape(
         color: Colors.black,
         strokeWidth: 2.0,
         dashWidth: 3.0,
         dashSpace: 3.0,
       );
-      DottedInputBorderShape border =
-          DottedInputBorderShape(dottedShape: dottedShape);
+      ZbjDottedInputBorderShape border =
+          ZbjDottedInputBorderShape(dottedShape: dottedShape);
 
-      DottedInputBorderShape scaledBorder =
-          border.scale(2.0) as DottedInputBorderShape;
+      ZbjDottedInputBorderShape scaledBorder =
+          border.scale(2.0) as ZbjDottedInputBorderShape;
 
       // Ensure that scale has scaled the dottedShape's properties
       expect(scaledBorder.dottedShape.strokeWidth, 4.0);

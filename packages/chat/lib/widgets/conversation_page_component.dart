@@ -35,7 +35,7 @@ class _ConversationComponentState extends State<ConversationPageComponent> {
       ),
       body: SafeArea(
           child: ConversationComponent(
-        pageHeader: PageHeader.subLevel(
+        pageHeader: ZbjPageHeader.subLevel(
           icon: ZbjIconButton.subtle(
             icon: const Icon(CustomIcons.arrow_left),
             onPressed: () {

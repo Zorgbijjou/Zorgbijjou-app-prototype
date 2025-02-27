@@ -6,18 +6,18 @@ import 'package:theme/theme.dart';
 import '../styles/state_colors.dart';
 import 'label.dart';
 
-class Card extends md.StatefulWidget {
+class ZbjCard extends md.StatefulWidget {
   final VoidCallback? onTap;
-  final StateColors Function(BuildContext) backgroundColors;
+  final ZbjStateColors Function(BuildContext) backgroundColors;
   final Widget cardContentWidget;
 
-  const Card._internal({
+  const ZbjCard._internal({
     this.onTap,
     required this.backgroundColors,
     required this.cardContentWidget,
   });
 
-  factory Card.primary({
+  factory ZbjCard.primary({
     Key? key,
     required String title,
     int titleMaxLines = 3,
@@ -26,9 +26,9 @@ class Card extends md.StatefulWidget {
     ImageProvider<Object>? image,
     VoidCallback? onTap,
   }) {
-    return Card._internal(
+    return ZbjCard._internal(
       onTap: onTap,
-      backgroundColors: (context) => StateColors(
+      backgroundColors: (context) => ZbjStateColors(
         defaultColor: context.tokens.color.tokensYellow50,
         activeColor: context.tokens.color.tokensYellow200,
         hoverColor: context.tokens.color.tokensYellow100,
@@ -43,19 +43,19 @@ class Card extends md.StatefulWidget {
     );
   }
 
-  factory Card.large({
+  factory ZbjCard.large({
     Key? key,
     required String title,
     int titleMaxLines = 3,
     String? subTitle,
-    Label? label,
+    ZbjLabel? label,
     md.Widget? body,
     ImageProvider<Object>? image,
     VoidCallback? onTap,
   }) {
-    return Card._internal(
+    return ZbjCard._internal(
       onTap: onTap,
-      backgroundColors: (context) => StateColors(
+      backgroundColors: (context) => ZbjStateColors(
         defaultColor: context.tokens.color.tokensTurqoise50,
         activeColor: context.tokens.color.tokensTurqoise200,
         hoverColor: context.tokens.color.tokensTurqoise100,
@@ -73,10 +73,10 @@ class Card extends md.StatefulWidget {
   }
 
   @override
-  md.State<Card> createState() => _CardState();
+  md.State<ZbjCard> createState() => _ZbjCardState();
 }
 
-class _CardState extends md.State<Card> {
+class _ZbjCardState extends md.State<ZbjCard> {
   bool isFocused = false;
   var focusNode = FocusNode();
 
@@ -90,7 +90,7 @@ class _CardState extends md.State<Card> {
       margin: EdgeInsets.zero,
       shape: RoundedRectangleBorder(borderRadius: borderRadius),
       color: backgroundColors.defaultColor,
-      child: OutlinedFocus(
+      child: ZbjOutlinedFocus(
         borderRadius: borderRadius,
         focusNode: focusNode,
         builder: (context, showFocus) => md.Semantics(
@@ -159,7 +159,7 @@ class _LargeCardContent extends md.StatelessWidget {
   final String title;
   final int titleMaxLines;
   final String? subTitle;
-  final Label? label;
+  final ZbjLabel? label;
   final Widget? body;
   final ImageProvider<Object>? image;
 
@@ -201,7 +201,7 @@ class _CardContent extends StatelessWidget {
   final String title;
   final int titleMaxLines;
   final String? subTitle;
-  final Label? label;
+  final ZbjLabel? label;
   final Widget? body;
 
   const _CardContent({

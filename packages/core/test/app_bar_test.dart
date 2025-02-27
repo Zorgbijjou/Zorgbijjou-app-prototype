@@ -14,7 +14,7 @@ void main() {
       var mockCallback = MockCallback();
 
       await tester.pumpWidget(materialAppWithTokens(
-        child: CustomAppBar(
+        child: ZbjAppBar(
           onPressed: mockCallback.call,
         ),
       ));

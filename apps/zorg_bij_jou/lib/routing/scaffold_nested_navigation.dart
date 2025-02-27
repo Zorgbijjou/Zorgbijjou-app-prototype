@@ -72,7 +72,7 @@ class ScaffoldWithNestedNavigationState
                     ignoring: true,
                     child: Opacity(
                       opacity: 0.2,
-                      child: GridOverlay(),
+                      child: ZbjGridOverlay(),
                     ),
                   )
                 : const SizedBox(),

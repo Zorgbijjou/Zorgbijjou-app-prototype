@@ -55,7 +55,7 @@ class ContactFooter extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Expanded(
-                        child: StackedButton.primary(
+                        child: ZbjStackedButton.primary(
                           fill: true,
                           label:
                               AppLocalizations.of(context)!.contactFooterCallUs,
@@ -65,7 +65,7 @@ class ContactFooter extends StatelessWidget {
                       ),
                       const SizedBox(width: 16),
                       Expanded(
-                        child: StackedButton.primary(
+                        child: ZbjStackedButton.primary(
                           fill: true,
                           label: AppLocalizations.of(context)!
                               .contactFooterConversation,

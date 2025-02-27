@@ -18,17 +18,17 @@ void main() {
         () {
       var someList = ['a', 'b', 'c', 'd'];
 
-      expect(someList.getListItemPosition('a'), ListItemPosition.first);
-      expect(someList.getListItemPosition('b'), ListItemPosition.middle);
-      expect(someList.getListItemPosition('c'), ListItemPosition.middle);
-      expect(someList.getListItemPosition('d'), ListItemPosition.last);
+      expect(someList.getListItemPosition('a'), ZbjListItemPosition.first);
+      expect(someList.getListItemPosition('b'), ZbjListItemPosition.middle);
+      expect(someList.getListItemPosition('c'), ZbjListItemPosition.middle);
+      expect(someList.getListItemPosition('d'), ZbjListItemPosition.last);
     });
   });
 
   group('ListItem', () {
     testWidgets('Should display a title', (tester) async {
       await tester.pumpWidget(materialAppWithTokens(
-          child: ListItem(
+          child: ZbjListItem(
         title: 'Test list item',
         onTap: () {},
       )));
@@ -45,7 +45,7 @@ void main() {
       var tokens = DefaultTokens();
       await tester.pumpWidget(materialAppWithTokens(
         tokens: tokens,
-        child: ListItem(
+        child: ZbjListItem(
           title: 'Test list item',
           focusNode: focusNode, // Pass the FocusNode to the ListItem
           onTap: () {},
@@ -58,8 +58,8 @@ void main() {
       var focusWidget = find.byKey(const Key('outlined_focus'));
       expect(focusWidget, findsOneWidget);
 
-      expect(
-          tester.widget<Material>(focusWidget).shape, isA<DottedBorderShape>());
+      expect(tester.widget<Material>(focusWidget).shape,
+          isA<ZbjDottedBorderShape>());
     });
 
     testWidgets('Should handle keyboard interaction and call onTap',
@@ -69,7 +69,7 @@ void main() {
       var mockCallback = MockCallback();
 
       await tester.pumpWidget(materialAppWithTokens(
-        child: ListItem(
+        child: ZbjListItem(
           title: 'Test list item',
           focusNode: focusNode,
           onTap: mockCallback.call,
@@ -84,8 +84,8 @@ void main() {
 
       expect(focusWidget, findsOneWidget);
 
-      expect(
-          tester.widget<Material>(focusWidget).shape, isA<DottedBorderShape>());
+      expect(tester.widget<Material>(focusWidget).shape,
+          isA<ZbjDottedBorderShape>());
 
       // Simulate a user pressing the Enter key to activate the ListItem
       await tester.sendKeyEvent(LogicalKeyboardKey.enter);
@@ -99,7 +99,7 @@ void main() {
       'Screen reader announces correct name when OutlinedFocus is focused',
       (WidgetTester tester) async {
         await tester.pumpWidget(materialAppWithTokens(
-          child: ListItem(
+          child: ZbjListItem(
             title: 'Test list item',
             onTap: () {},
           ),

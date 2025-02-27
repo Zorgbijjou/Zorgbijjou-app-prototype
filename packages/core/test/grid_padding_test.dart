@@ -16,9 +16,9 @@ void main() {
       tester.view.devicePixelRatio = 1.0;
 
       await tester.pumpWidget(materialAppWithTokens(
-          child: const GridPadding(child: Text('Test widget'))));
+          child: const ZbjGridPadding(child: Text('Test widget'))));
 
-      var context = tester.element(find.byType(GridPadding));
+      var context = tester.element(find.byType(ZbjGridPadding));
       var gridForWidth = context.getGridForWidth(width);
 
       var paddingWidget = tester.widget<Padding>(find.byType(Padding));
@@ -35,13 +35,13 @@ void main() {
       tester.view.devicePixelRatio = 1.0;
 
       await tester.pumpWidget(materialAppWithTokens(
-          child: const GridSizedBox(
+          child: const ZbjGridSizedBox(
         defaultColumnSpan: 1,
-        alignment: GridSizedBoxAlignment.left,
-        child: GridPadding(child: Text('Test widget')),
+        alignment: ZbjGridSizedBoxAlignment.left,
+        child: ZbjGridPadding(child: Text('Test widget')),
       )));
 
-      var context = tester.element(find.byType(GridPadding));
+      var context = tester.element(find.byType(ZbjGridPadding));
       var gridForWidth = context.getGridForWidth(width);
 
       var paddingWidget = tester.widget<Padding>(find.byType(Padding));
@@ -60,13 +60,13 @@ void main() {
       tester.view.devicePixelRatio = 1.0;
 
       await tester.pumpWidget(materialAppWithTokens(
-          child: const GridSizedBox(
+          child: const ZbjGridSizedBox(
         defaultColumnSpan: 1,
-        alignment: GridSizedBoxAlignment.right,
-        child: GridPadding(child: Text('Test widget')),
+        alignment: ZbjGridSizedBoxAlignment.right,
+        child: ZbjGridPadding(child: Text('Test widget')),
       )));
 
-      var context = tester.element(find.byType(GridPadding));
+      var context = tester.element(find.byType(ZbjGridPadding));
       var gridForWidth = context.getGridForWidth(width);
 
       var paddingWidget = tester.widget<Padding>(find.byType(Padding));

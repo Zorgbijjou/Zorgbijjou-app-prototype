@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:theme/assets/tokens/grid_extensions.dart';
 import 'package:theme/assets/tokens/grid_tokens.dart';
 
-class GridOverlay extends StatelessWidget {
-  const GridOverlay({super.key});
+class ZbjGridOverlay extends StatelessWidget {
+  const ZbjGridOverlay({super.key});
 
   @override
   Widget build(BuildContext context) {

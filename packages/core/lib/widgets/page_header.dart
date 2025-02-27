@@ -2,15 +2,15 @@ import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
-abstract class PageHeader {
-  static FirstLevelPageHeader firstLevel({
+abstract class ZbjPageHeader {
+  static ZbjFirstLevelPageHeader firstLevel({
     Key? key,
     required String title,
     Widget? icon,
     bool inverted = false,
     Widget? appBar,
   }) {
-    return FirstLevelPageHeader(
+    return ZbjFirstLevelPageHeader(
       key: key,
       title: title,
       icon: icon,
@@ -19,7 +19,7 @@ abstract class PageHeader {
     );
   }
 
-  static SubLevelPageHeader subLevel({
+  static ZbjSubLevelPageHeader subLevel({
     Key? key,
     required String title,
     String? subtitle,
@@ -28,7 +28,7 @@ abstract class PageHeader {
     Widget? avatar,
     Widget? appBar,
   }) {
-    return SubLevelPageHeader(
+    return ZbjSubLevelPageHeader(
       key: key,
       title: title,
       subtitle: subtitle,
@@ -40,13 +40,13 @@ abstract class PageHeader {
   }
 }
 
-class FirstLevelPageHeader extends StatelessWidget {
+class ZbjFirstLevelPageHeader extends StatelessWidget {
   final String title;
   final Widget? icon;
   final bool inverted;
   final Widget? appBar;
 
-  const FirstLevelPageHeader({
+  const ZbjFirstLevelPageHeader({
     super.key,
     required this.title,
     this.icon,
@@ -56,7 +56,7 @@ class FirstLevelPageHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridPadding(
+    return ZbjGridPadding(
       verticalPadding: 24,
       child: Wrap(
         crossAxisAlignment: WrapCrossAlignment.center,
@@ -82,7 +82,7 @@ class FirstLevelPageHeader extends StatelessWidget {
   }
 }
 
-class SubLevelPageHeader extends StatelessWidget {
+class ZbjSubLevelPageHeader extends StatelessWidget {
   final String title;
   final String? subtitle;
   final String? introduction;
@@ -91,7 +91,7 @@ class SubLevelPageHeader extends StatelessWidget {
   final bool inverted;
   final Widget? appBar;
 
-  const SubLevelPageHeader({
+  const ZbjSubLevelPageHeader({
     super.key,
     required this.title,
     this.subtitle,
@@ -111,7 +111,7 @@ class SubLevelPageHeader extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (appBar != null) appBar!,
-          GridPadding(
+          ZbjGridPadding(
             verticalPadding: 16,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

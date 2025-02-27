@@ -108,8 +108,8 @@ void main() {
       var focusWidget = find.byKey(const Key('outlined_focus'));
 
       expect(focusWidget, findsOneWidget);
-      expect(
-          tester.widget<Material>(focusWidget).shape, isA<DottedBorderShape>());
+      expect(tester.widget<Material>(focusWidget).shape,
+          isA<ZbjDottedBorderShape>());
 
       await tester.sendKeyEvent(LogicalKeyboardKey.enter);
       await tester.pump();

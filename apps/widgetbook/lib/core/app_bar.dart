@@ -12,7 +12,7 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
     path: 'Core')
 Widget buildAppBarUseCase(BuildContext context) {
   return Scaffold(
-    appBar: CustomAppBar(
+    appBar: ZbjAppBar(
       onPressed: () {},
     ),
     // full height placeholder
@@ -28,7 +28,7 @@ Widget buildAppBarUseCase(BuildContext context) {
     path: 'Core')
 Widget buildAppBarWithScrollableContentUseCase(BuildContext context) {
   return Scaffold(
-    appBar: CustomAppBar(
+    appBar: ZbjAppBar(
       onPressed: () {},
     ),
     body: ListView.builder(

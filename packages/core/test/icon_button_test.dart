@@ -61,8 +61,8 @@ void main() {
 
     expect(focusWidget, findsOneWidget);
 
-    expect(
-        tester.widget<Material>(focusWidget).shape, isA<DottedBorderShape>());
+    expect(tester.widget<Material>(focusWidget).shape,
+        isA<ZbjDottedBorderShape>());
   });
 
   testWidgets('Should handle keyboard interaction and call onTap',
@@ -83,8 +83,8 @@ void main() {
     var focusWidget = find.byKey(const Key('outlined_focus'));
 
     expect(focusWidget, findsOneWidget);
-    expect(
-        tester.widget<Material>(focusWidget).shape, isA<DottedBorderShape>());
+    expect(tester.widget<Material>(focusWidget).shape,
+        isA<ZbjDottedBorderShape>());
 
     // Simulate a user pressing the Enter key to call the onTap function
     await tester.sendKeyEvent(LogicalKeyboardKey.enter);

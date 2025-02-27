@@ -35,8 +35,8 @@ class QuestionComponent extends StatelessWidget {
                   children: [
                     const SizedBox(height: 24),
                     if (viewModel.question != null)
-                      PageHeader.subLevel(
-                        appBar: CustomAppBar(
+                      ZbjPageHeader.subLevel(
+                        appBar: ZbjAppBar(
                           onPressed: () => Navigator.of(context).pop(),
                         ),
                         title: translationRepository.translate(
@@ -57,7 +57,8 @@ class QuestionComponent extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 24, vertical: 32),
                       child: viewModel.questionContent != null
-                          ? Markdown(content: viewModel.questionContent ?? '')
+                          ? ZbjMarkdown(
+                              content: viewModel.questionContent ?? '')
                           : Text(AppLocalizations.of(context)!
                               .contentNotAvailable),
                     ),

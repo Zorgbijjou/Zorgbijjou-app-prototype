@@ -8,10 +8,10 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../styles/colored_button_style.dart';
 
-class Markdown extends StatelessWidget {
+class ZbjMarkdown extends StatelessWidget {
   final String content;
 
-  const Markdown({
+  const ZbjMarkdown({
     super.key,
     this.content = '',
   });
@@ -114,7 +114,7 @@ class AccessibleLinkBuilder extends fmd.MarkdownElementBuilder {
         ),
       );
 
-      var buttonStyle = ColoredButtonStyle.subtleButtonStyle(context)
+      var buttonStyle = ZbjColoredButtonStyle.subtleButtonStyle(context)
           .getButtonStyle(baseStyle);
 
       return Text.rich(
@@ -124,7 +124,7 @@ class AccessibleLinkBuilder extends fmd.MarkdownElementBuilder {
               link: true,
               label: text,
               excludeSemantics: true,
-              child: OutlinedFocus(
+              child: ZbjOutlinedFocus(
                 focusNode: focusNode,
                 borderRadius: BorderRadius.circular(4),
                 builder: (context, showFocus) {

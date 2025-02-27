@@ -6,7 +6,7 @@ import 'package:theme/assets/tokens/tokens.g.dart';
 
 class Button extends StatefulWidget {
   final String label;
-  final Appearance appearance;
+  final ZbjAppearance appearance;
   final Function() onPressed;
   final bool cropped;
   final bool fill;
@@ -34,7 +34,7 @@ class Button extends StatefulWidget {
   }) {
     return Button._internal(
       label: label,
-      appearance: Appearance.brand,
+      appearance: ZbjAppearance.brand,
       onPressed: onPressed,
       fill: fill,
       icon: icon,
@@ -52,7 +52,7 @@ class Button extends StatefulWidget {
   }) {
     return Button._internal(
       key: key,
-      appearance: Appearance.primary,
+      appearance: ZbjAppearance.primary,
       label: label,
       onPressed: onPressed,
       fill: fill,
@@ -72,7 +72,7 @@ class Button extends StatefulWidget {
     return Button._internal(
       key: key,
       label: label,
-      appearance: Appearance.secondary,
+      appearance: ZbjAppearance.secondary,
       onPressed: onPressed,
       fill: fill,
       icon: icon,
@@ -92,7 +92,7 @@ class Button extends StatefulWidget {
     return Button._internal(
       key: key,
       label: label,
-      appearance: Appearance.subtle,
+      appearance: ZbjAppearance.subtle,
       onPressed: onPressed,
       cropped: cropped,
       fill: fill,
@@ -110,7 +110,7 @@ class _ButtonState extends State<Button> {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedFocus(
+    return ZbjOutlinedFocus(
       focusNode: focusNode,
       borderRadius: BorderRadius.circular(24),
       builder: (context, showFocus) {
@@ -121,13 +121,13 @@ class _ButtonState extends State<Button> {
 
   Widget _buildButton(BuildContext context) {
     switch (widget.appearance) {
-      case Appearance.brand:
+      case ZbjAppearance.brand:
         return _buildBrandButton(context);
-      case Appearance.primary:
+      case ZbjAppearance.primary:
         return _buildPrimaryButton(context);
-      case Appearance.secondary:
+      case ZbjAppearance.secondary:
         return _buildSecondaryButton(context);
-      case Appearance.subtle:
+      case ZbjAppearance.subtle:
         return _buildSubtleButton(context);
     }
   }
@@ -140,8 +140,8 @@ class _ButtonState extends State<Button> {
           horizontal: widget.cropped ? 0 : 24, vertical: 0),
     );
 
-    var buttonStyle =
-        ColoredButtonStyle.subtleButtonStyle(context).getButtonStyle(baseStyle);
+    var buttonStyle = ZbjColoredButtonStyle.subtleButtonStyle(context)
+        .getButtonStyle(baseStyle);
 
     var textWidget = Padding(
         padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 12),
@@ -171,7 +171,7 @@ class _ButtonState extends State<Button> {
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 0),
     );
 
-    var buttonStyle = ColoredButtonStyle.secondaryButtonStyle(context)
+    var buttonStyle = ZbjColoredButtonStyle.secondaryButtonStyle(context)
         .getButtonStyle(baseStyle);
 
     var textWidget = Padding(
@@ -202,7 +202,7 @@ class _ButtonState extends State<Button> {
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 0),
     );
 
-    var buttonStyle = ColoredButtonStyle.primaryButtonStyle(context)
+    var buttonStyle = ZbjColoredButtonStyle.primaryButtonStyle(context)
         .getButtonStyle(baseStyle);
 
     var textWidget = Padding(
@@ -233,8 +233,8 @@ class _ButtonState extends State<Button> {
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 0),
     );
 
-    var buttonStyle =
-        ColoredButtonStyle.brandButtonStyle(context).getButtonStyle(baseStyle);
+    var buttonStyle = ZbjColoredButtonStyle.brandButtonStyle(context)
+        .getButtonStyle(baseStyle);
 
     var textWidget = Padding(
         padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 12),

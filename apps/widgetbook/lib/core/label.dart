@@ -7,12 +7,12 @@ import '../icons.dart';
 
 @widgetbook.UseCase(
     name: 'Default',
-    type: Label,
+    type: ZbjLabel,
     designLink:
         'https://www.figma.com/design/MtBXGXmFo8CcMmFmtHB1PP/Pati%C3%ABntenapp?node-id=374-5527',
     path: 'Core')
 Widget buildDefaultLabelUseCase(BuildContext context) {
-  return Label(
+  return ZbjLabel(
     label: context.knobs.string(label: 'Label', initialValue: 'Label'),
     icon: iconDataKnob(context: context),
   );

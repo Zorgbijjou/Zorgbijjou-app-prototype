@@ -21,7 +21,7 @@ void main() {
       (WidgetTester tester) async {
     await tester.pumpWidget(
       materialAppWithTokens(
-        child: IconWithDevModeButton(
+        child: ZbjIconWithDevModeButton(
           icon: const Icon(Icons.settings),
           devModeEnabled: false,
           onDevModeEnabled: mockCallbacks.onDevModeEnabled,
@@ -38,7 +38,7 @@ void main() {
       (WidgetTester tester) async {
     await tester.pumpWidget(
       materialAppWithTokens(
-        child: IconWithDevModeButton(
+        child: ZbjIconWithDevModeButton(
           icon: const Icon(Icons.settings),
           devModeEnabled: false,
           onDevModeEnabled: mockCallbacks.onDevModeEnabled,
@@ -61,7 +61,7 @@ void main() {
       (WidgetTester tester) async {
     await tester.pumpWidget(
       materialAppWithTokens(
-        child: IconWithDevModeButton(
+        child: ZbjIconWithDevModeButton(
           icon: const Icon(Icons.settings),
           devModeEnabled: true,
           onDevModeEnabled: mockCallbacks.onDevModeEnabled,
@@ -77,7 +77,7 @@ void main() {
       (WidgetTester tester) async {
     await tester.pumpWidget(
       materialAppWithTokens(
-        child: IconWithDevModeButton(
+        child: ZbjIconWithDevModeButton(
           icon: const Icon(Icons.settings),
           devModeEnabled: true,
           onDevModeEnabled: mockCallbacks.onDevModeEnabled,

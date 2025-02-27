@@ -16,7 +16,7 @@ void main() {
   group('Card component', () {
     testWidgets('Should display a title, subtitle and body', (tester) async {
       await tester.pumpWidget(materialAppWithTokens(
-        child: Card.primary(
+        child: ZbjCard.primary(
           onTap: () {},
           title: 'Test card title',
           subTitle: 'Test card subtitle',
@@ -39,7 +39,7 @@ void main() {
       var tokens = DefaultTokens();
       await tester.pumpWidget(materialAppWithTokens(
         tokens: tokens,
-        child: Card.primary(
+        child: ZbjCard.primary(
           title: 'Test card title',
           onTap: () {},
         ),
@@ -52,8 +52,8 @@ void main() {
 
       expect(focusWidget, findsOneWidget);
 
-      expect(
-          tester.widget<Material>(focusWidget).shape, isA<DottedBorderShape>());
+      expect(tester.widget<Material>(focusWidget).shape,
+          isA<ZbjDottedBorderShape>());
     });
 
     testWidgets('Should handle keyboard interaction and call onTap',
@@ -61,7 +61,7 @@ void main() {
       var mockCallback = MockCallback();
 
       await tester.pumpWidget(materialAppWithTokens(
-        child: Card.primary(
+        child: ZbjCard.primary(
           title: 'Test card title',
           onTap: mockCallback.call,
         ),
@@ -74,8 +74,8 @@ void main() {
       var focusWidget = find.byKey(const Key('outlined_focus'));
 
       expect(focusWidget, findsOneWidget);
-      expect(
-          tester.widget<Material>(focusWidget).shape, isA<DottedBorderShape>());
+      expect(tester.widget<Material>(focusWidget).shape,
+          isA<ZbjDottedBorderShape>());
 
       // Simulate a user pressing the Enter key to activate the ListItem
       await tester.sendKeyEvent(LogicalKeyboardKey.enter);
@@ -89,7 +89,7 @@ void main() {
         'Screen reader announces correct name when OutlinedFocus is focused',
         (WidgetTester tester) async {
       await tester.pumpWidget(materialAppWithTokens(
-        child: Card.primary(
+        child: ZbjCard.primary(
           onTap: () {},
           title: 'Test Card',
           body: const Text('Test list item body'),
@@ -97,7 +97,7 @@ void main() {
       ));
 
       expect(
-        tester.semantics.find(find.byType(Card)),
+        tester.semantics.find(find.byType(ZbjCard)),
         containsSemantics(
           label: 'Test Card\nTest list item body',
           isButton: true,
@@ -107,7 +107,7 @@ void main() {
 
     testWidgets('Overflowing titles ends in ...', (WidgetTester tester) async {
       await tester.pumpWidget(materialAppWithTokens(
-        child: Card.primary(
+        child: ZbjCard.primary(
           title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
               'Morbi in elit mauris. Nam et facilisis nunc. Nulla augue nisl,'
               ' rutrum eu felis nec, ullamcorper imperdiet purus.',

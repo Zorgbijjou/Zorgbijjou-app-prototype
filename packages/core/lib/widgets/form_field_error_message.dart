@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
-class FormFieldErrorMessage extends StatelessWidget {
-  const FormFieldErrorMessage({
+class ZbjFormFieldErrorMessage extends StatelessWidget {
+  const ZbjFormFieldErrorMessage({
     super.key,
     required this.errorText,
   });

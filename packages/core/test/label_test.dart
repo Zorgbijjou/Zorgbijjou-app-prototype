@@ -7,7 +7,7 @@ import 'helpers.dart';
 void main() {
   testWidgets('Should contain text and icon', (tester) async {
     await tester.pumpWidget(materialAppWithTokens(
-        child: const Label(label: 'text', icon: Icons.label)));
+        child: const ZbjLabel(label: 'text', icon: Icons.label)));
 
     var labelFinder = find.text('text');
     var iconFinder = find.byType(Icon);
@@ -17,8 +17,8 @@ void main() {
   });
 
   testWidgets('Should contain text and no icon', (tester) async {
-    await tester
-        .pumpWidget(materialAppWithTokens(child: const Label(label: 'text')));
+    await tester.pumpWidget(
+        materialAppWithTokens(child: const ZbjLabel(label: 'text')));
 
     var labelFinder = find.text('text');
     var iconFinder = find.byType(Icon);

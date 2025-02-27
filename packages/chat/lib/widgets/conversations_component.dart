@@ -41,7 +41,7 @@ class ConversationsComponent extends StatelessWidget {
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                PageHeader.firstLevel(
+                ZbjPageHeader.firstLevel(
                   title: AppLocalizations.of(context)!.conversationTitle,
                   icon: Icon(
                     CustomIcons.message_text_square_02,

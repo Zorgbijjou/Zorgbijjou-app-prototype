@@ -5,12 +5,12 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 @widgetbook.UseCase(
     name: 'Negative',
-    type: NotificationBanner,
+    type: ZbjNotificationBanner,
     designLink:
         'https://www.figma.com/design/Vg3ewXzIdLINWXMKMe14yN/Pill-Components?node-id=9509-4628&t=d4pVCOhWHA8dSxo0-0',
     path: 'Core')
 Widget buildNotificationBannerNegativeUseCase(BuildContext context) {
-  return NotificationBanner.negative(
+  return ZbjNotificationBanner.negative(
     title: context.knobs.string(label: 'Title', initialValue: 'Heading'),
     content: context.knobs.string(
         label: 'Content',
@@ -21,12 +21,12 @@ Widget buildNotificationBannerNegativeUseCase(BuildContext context) {
 
 @widgetbook.UseCase(
     name: 'Positive',
-    type: NotificationBanner,
+    type: ZbjNotificationBanner,
     designLink:
         'https://www.figma.com/design/Vg3ewXzIdLINWXMKMe14yN/Pill-Components?node-id=9509-4628&t=d4pVCOhWHA8dSxo0-0',
     path: 'Core')
 Widget buildNotificationBannerPositiveUseCase(BuildContext context) {
-  return NotificationBanner.positive(
+  return ZbjNotificationBanner.positive(
     title: context.knobs.string(label: 'Title', initialValue: 'Heading'),
     content: context.knobs.string(
         label: 'Content',

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
-enum BulletType { bullet, icon, extra }
+enum ZbjBulletType { bullet, icon, extra }
 
-class BulletItem extends StatelessWidget {
-  final BulletType type;
+class ZbjBulletItem extends StatelessWidget {
+  final ZbjBulletType type;
   final String label;
   final String? title;
   final Widget? icon;
   final Color? iconBackgroundColor;
 
-  const BulletItem({
+  const ZbjBulletItem({
     super.key,
     required this.type,
     required this.label,
@@ -19,27 +19,27 @@ class BulletItem extends StatelessWidget {
     this.iconBackgroundColor,
   });
 
-  factory BulletItem.icon({
+  factory ZbjBulletItem.icon({
     required String label,
     required Widget icon,
   }) {
-    return BulletItem(type: BulletType.icon, label: label, icon: icon);
+    return ZbjBulletItem(type: ZbjBulletType.icon, label: label, icon: icon);
   }
 
-  factory BulletItem.bullet({
+  factory ZbjBulletItem.bullet({
     required String label,
   }) {
-    return BulletItem(type: BulletType.bullet, label: label);
+    return ZbjBulletItem(type: ZbjBulletType.bullet, label: label);
   }
 
-  factory BulletItem.extra({
+  factory ZbjBulletItem.extra({
     required String label,
     required Widget icon,
     required Color iconBackgroundColor,
     String? title,
   }) {
-    return BulletItem(
-      type: BulletType.extra,
+    return ZbjBulletItem(
+      type: ZbjBulletType.extra,
       title: title,
       label: label,
       icon: icon,
@@ -88,11 +88,11 @@ class BulletItem extends StatelessWidget {
 
   Widget buildIconContainer() {
     switch (type) {
-      case BulletType.bullet:
+      case ZbjBulletType.bullet:
         return const Text('•');
-      case BulletType.icon:
+      case ZbjBulletType.icon:
         return icon!;
-      case BulletType.extra:
+      case ZbjBulletType.extra:
         return Container(
           decoration: BoxDecoration(
             color: iconBackgroundColor,
@@ -106,20 +106,20 @@ class BulletItem extends StatelessWidget {
 
   double? gap() {
     switch (type) {
-      case BulletType.bullet:
-      case BulletType.icon:
+      case ZbjBulletType.bullet:
+      case ZbjBulletType.icon:
         return 8;
-      case BulletType.extra:
+      case ZbjBulletType.extra:
         return 12;
     }
   }
 
   double getTopPadding() {
     switch (type) {
-      case BulletType.bullet:
-      case BulletType.icon:
+      case ZbjBulletType.bullet:
+      case ZbjBulletType.icon:
         return 0;
-      case BulletType.extra:
+      case ZbjBulletType.extra:
         return 12;
     }
   }

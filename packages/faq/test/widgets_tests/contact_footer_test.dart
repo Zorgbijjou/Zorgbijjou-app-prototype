@@ -36,9 +36,9 @@ void main() {
     expect(find.text('Bel ons'), findsOneWidget);
     expect(find.image(const AssetImage('packages/faq/assets/images/faq.png')),
         findsOneWidget);
-    expect(
-        find.widgetWithIcon(StackedButton, CustomIcons.phone), findsOneWidget);
-    expect(find.widgetWithIcon(StackedButton, CustomIcons.message_square_02),
+    expect(find.widgetWithIcon(ZbjStackedButton, CustomIcons.phone),
+        findsOneWidget);
+    expect(find.widgetWithIcon(ZbjStackedButton, CustomIcons.message_square_02),
         findsOneWidget);
   });
 }

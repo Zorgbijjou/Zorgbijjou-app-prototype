@@ -6,7 +6,7 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 @widgetbook.UseCase(
     name: 'Default',
-    type: ListItem,
+    type: ZbjListItem,
     designLink:
         'https://www.figma.com/design/Vg3ewXzIdLINWXMKMe14yN/Zorg-bij-jou-Components?node-id=847-865&t=Mmpl3ODptnI6vseh-4',
     path: 'Core')
@@ -15,15 +15,15 @@ Widget buildListItemUseCase(BuildContext context) {
       color: context.knobs.boolean(label: 'Inverted')
           ? context.tokens.color.tokensTurqoise600
           : context.tokens.color.tokensWhite,
-      child: ListItem(
+      child: ZbjListItem(
         title: context.knobs.string(label: 'Title', initialValue: 'List Item'),
         position: context.knobs
             .list(
                 label: 'Position',
                 options: [
-                  (label: 'First', position: ListItemPosition.first),
-                  (label: 'Middle', position: ListItemPosition.middle),
-                  (label: 'Last', position: ListItemPosition.last)
+                  (label: 'First', position: ZbjListItemPosition.first),
+                  (label: 'Middle', position: ZbjListItemPosition.middle),
+                  (label: 'Last', position: ZbjListItemPosition.last)
                 ],
                 labelBuilder: (item) => item.label)
             .position,
@@ -34,7 +34,7 @@ Widget buildListItemUseCase(BuildContext context) {
 
 @widgetbook.UseCase(
     name: 'List of List Items',
-    type: ListItem,
+    type: ZbjListItem,
     designLink:
         'https://www.figma.com/design/Vg3ewXzIdLINWXMKMe14yN/Zorg-bij-jou-Components?node-id=847-865&t=Mmpl3ODptnI6vseh-4',
     path: 'Core')
@@ -45,7 +45,7 @@ Widget buildListOfListItemsUseCase(BuildContext context) {
     'Kan ik ook weer stoppen met thuismeten?'
   ];
   var items = labels
-      .map((label) => ListItem(
+      .map((label) => ZbjListItem(
             title: label,
             position: labels.getListItemPosition(label),
             onTap: () {},
@@ -59,14 +59,14 @@ Widget buildListOfListItemsUseCase(BuildContext context) {
           : context.tokens.color.tokensWhite,
       child: ListView.separated(
           itemBuilder: (context, index) => items[index],
-          separatorBuilder: (context, index) => CustomDivider.standard(),
+          separatorBuilder: (context, index) => ZbjDivider.standard(),
           itemCount: items.length));
 }
 
 // One for inverted list of items, put it on a dark background
 @widgetbook.UseCase(
     name: 'Inverted List of List Items',
-    type: ListItem,
+    type: ZbjListItem,
     designLink:
         'https://www.figma.com/design/Vg3ewXzIdLINWXMKMe14yN/Zorg-bij-jou-Components?node-id=847-865&t=Mmpl3ODptnI6vseh-4',
     path: 'Core')
@@ -77,7 +77,7 @@ Widget buildInvertedListOfListItemsUseCase(BuildContext context) {
     'Kan ik ook weer stoppen met thuismeten?'
   ];
   var items = labels
-      .map((label) => ListItem(
+      .map((label) => ZbjListItem(
             title: label,
             position: labels.getListItemPosition(label),
             onTap: () {},
@@ -89,6 +89,6 @@ Widget buildInvertedListOfListItemsUseCase(BuildContext context) {
       color: context.tokens.color.tokensTurqoise600,
       child: ListView.separated(
           itemBuilder: (context, index) => items[index],
-          separatorBuilder: (context, index) => CustomDivider.inverted(),
+          separatorBuilder: (context, index) => ZbjDivider.inverted(),
           itemCount: items.length));
 }

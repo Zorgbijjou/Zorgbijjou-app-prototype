@@ -4,10 +4,10 @@ import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:theme/assets/icons/custom_icons.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+class ZbjAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Function() onPressed;
 
-  const CustomAppBar({
+  const ZbjAppBar({
     super.key,
     required this.onPressed,
   });

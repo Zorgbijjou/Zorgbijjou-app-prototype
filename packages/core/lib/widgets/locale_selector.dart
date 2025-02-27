@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LocaleSelector extends StatelessWidget {
-  const LocaleSelector({
+class ZbjLocaleSelector extends StatelessWidget {
+  const ZbjLocaleSelector({
     super.key,
     required this.locale,
     required this.supportedLocales,

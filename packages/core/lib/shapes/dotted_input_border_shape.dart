@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 import 'dotted_border_shape.dart';
 
-class DottedInputBorderShape extends InputBorder {
-  final DottedBorderShape dottedShape;
+class ZbjDottedInputBorderShape extends InputBorder {
+  final ZbjDottedBorderShape dottedShape;
 
-  const DottedInputBorderShape({required this.dottedShape});
+  const ZbjDottedInputBorderShape({required this.dottedShape});
 
   @override
   InputBorder copyWith({BorderSide? borderSide}) {
-    return DottedInputBorderShape(
+    return ZbjDottedInputBorderShape(
         dottedShape: borderSide != null
-            ? DottedBorderShape(
+            ? ZbjDottedBorderShape(
                 color: borderSide.color,
                 strokeWidth: borderSide.width,
                 dashWidth: dottedShape.dashWidth,
@@ -45,6 +45,6 @@ class DottedInputBorderShape extends InputBorder {
   }
 
   @override
-  ShapeBorder scale(double t) => DottedInputBorderShape(
-      dottedShape: dottedShape.scale(t) as DottedBorderShape);
+  ShapeBorder scale(double t) => ZbjDottedInputBorderShape(
+      dottedShape: dottedShape.scale(t) as ZbjDottedBorderShape);
 }

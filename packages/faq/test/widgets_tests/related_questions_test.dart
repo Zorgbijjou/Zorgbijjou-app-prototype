@@ -63,7 +63,7 @@ void main() {
     // Assert
     expect(find.text('translated-${relatedQuestions[0].titleKey}'),
         findsOneWidget);
-    expect(find.byType(Card), findsExactly(3));
+    expect(find.byType(ZbjCard), findsExactly(3));
   });
 
   testWidgets(
@@ -98,6 +98,6 @@ void main() {
     ));
 
     // Assert
-    expect(find.byType(Card), findsNothing);
+    expect(find.byType(ZbjCard), findsNothing);
   });
 }

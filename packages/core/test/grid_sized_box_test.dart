@@ -26,9 +26,9 @@ void main() {
 
       await tester.pumpWidget(materialAppWithTokens(
           tester: tester,
-          child: const GridSizedBox(
+          child: const ZbjGridSizedBox(
             defaultColumnSpan: 1,
-            alignment: GridSizedBoxAlignment.left,
+            alignment: ZbjGridSizedBoxAlignment.left,
             child: Text('asdf'),
           )));
 
@@ -42,13 +42,13 @@ void main() {
 
       await tester.pumpWidget(materialAppWithTokens(
           tester: tester,
-          child: const GridSizedBox(
+          child: const ZbjGridSizedBox(
             defaultColumnSpan: 1,
-            alignment: GridSizedBoxAlignment.left,
+            alignment: ZbjGridSizedBoxAlignment.left,
             child: Text('asdf'),
           )));
 
-      var context = tester.element(find.byType(GridSizedBox));
+      var context = tester.element(find.byType(ZbjGridSizedBox));
       var expectedWidth = context.calculateGridSizedBoxWidth(1, false);
 
       var sizedBoxWidget = tester.widget<SizedBox>(find.byType(SizedBox));

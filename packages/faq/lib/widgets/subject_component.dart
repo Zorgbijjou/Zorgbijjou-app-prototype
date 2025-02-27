@@ -28,8 +28,8 @@ class SubjectComponent extends StatelessWidget {
                   children: [
                     const SizedBox(height: 24),
                     if (viewModel.subject != null)
-                      PageHeader.subLevel(
-                        appBar: CustomAppBar(
+                      ZbjPageHeader.subLevel(
+                        appBar: ZbjAppBar(
                           onPressed: () => Navigator.of(context).pop(),
                         ),
                         title: translationRepository.translate(
@@ -45,7 +45,7 @@ class SubjectComponent extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 24, vertical: 32),
                       child: viewModel.subjectContent != null
-                          ? Markdown(content: viewModel.subjectContent ?? '')
+                          ? ZbjMarkdown(content: viewModel.subjectContent ?? '')
                           : Text(AppLocalizations.of(context)!
                               .contentNotAvailable),
                     ),
@@ -81,12 +81,12 @@ class SubjectComponent extends StatelessWidget {
 
     for (int index = 0; index < questions.length; index++) {
       if (index > 0) {
-        children.add(CustomDivider.standard());
+        children.add(ZbjDivider.standard());
       }
 
       var question = questions[index];
 
-      ListItem item = ListItem(
+      ZbjListItem item = ZbjListItem(
         title: translationRepository.translate(
             Localizations.localeOf(context).languageCode, question.titleKey),
         position: questions.getListItemPosition(question),

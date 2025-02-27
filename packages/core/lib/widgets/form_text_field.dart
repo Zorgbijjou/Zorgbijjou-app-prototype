@@ -45,7 +45,7 @@ class ZbjFormTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedFocus(
+    return ZbjOutlinedFocus(
       suppressOutlineFocus: suppressOutlineFocus,
       focusNode: focusNode,
       borderRadius: BorderRadius.circular(8),
