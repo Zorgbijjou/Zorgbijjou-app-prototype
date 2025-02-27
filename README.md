@@ -306,3 +306,30 @@ melos run l10n:generate
 #### End-to-end tests
 
 At the moment there are no e2e tests
+
+### Deployment to App Stores
+
+The deployment for both the App Store and Google Play Store is automated using GitHub Actions. The workflow can be manually triggered through a dispatch event.
+
+1. Increment the version number in the `apps/zorg_bij_jou/pubspec.yaml` file
+
+   ```yaml
+   name: zorg_bij_jou
+   description: "Zorg bij jou app - Supports the patient journey through Hybrid Care."
+   publish_to: "none"
+   version: 0.1.0+1 # Increment the version number
+   ```
+
+1. Commit the changes to the `main` branch
+
+1. Go to the `ZBJ App` GitHub Action
+
+   https://github.com/Zorgbijjou/Zorgbijjou-app-prototype/actions/workflows/zorg-bij-jou-app.yml
+
+1. Click on the `Run workflow` button
+
+   <img src="screenshots/github_run_workflow.png">
+
+1. Check `Deploy iOS App` and `Deploy Android App` and click on the `Run workflow` button
+
+   <img src="screenshots/github_workflow_deploy_form.png">
